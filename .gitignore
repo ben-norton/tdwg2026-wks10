@@ -179,3 +179,5 @@ cython_debug/
 .cursorignore
 .cursorindexingignore
 docs/presentation/WKS10_Presentation_with_dialog solicitation.pptx
+docs/presentation/~$WKS10_Presentation.pptx
+*.tmp
