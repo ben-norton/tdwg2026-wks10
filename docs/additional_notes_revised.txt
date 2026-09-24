@@ -1,0 +1,36 @@
+AI and the People Who Do the Work
+Additional workshop notes (WKS10), 24 September 2026
+---------------------------------------------------------------------------
+
+Position: AI takes on repetitive work. People remain responsible for
+change, communication and judgement.
+
+1. The hardest problem is people, not technology.
+   The most difficult part of any software project is persuading people to
+   change how they work every day. That takes communication skills and
+   time. AI cannot do it.
+
+2. AI reduces the labour a task requires.
+   The same work takes less time and costs less.
+
+3. Time saved is time to reinvest.
+   Staff can use the reclaimed hours to learn new skills and take on work
+   that was previously out of reach.
+
+4. Demand is higher than ever.
+   The need for software and other technical work keeps growing. AI lets
+   people move up to higher-level tasks: design, decisions, review and
+   working with colleagues.
+
+5. There are real problems. The biggest is for entry-level workers.
+   The routine tasks that AI now absorbs are the tasks people have
+   traditionally learned on. We need new ways to train people and bring
+   them into the field.
+
+6. We are social creatures.
+   People will always look for contact with other people. For now, some
+   tasks must be done by humans, above all communication between people.
+
+7. Many AI models work by pattern matching.
+   That is why they are good at repetitive, well-defined transformations,
+   and why their results must always be checked.
