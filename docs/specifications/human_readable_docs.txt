@@ -1,0 +1,27 @@
+Title: Human-Readable Transformations
+
+Subtitle: Plain-language instructions an AI can follow to turn a source dataset into a target result
+
+Opens the black box. Anyone on the team can read, question, and contribute to the logic.
+Lowers the barrier. Domain experts can take part without needing to code.
+AI-reviewed documentation. Models flag gaps and ambiguities, so the docs come out tighter and more complete.
+Built-in verification. The instructions become the spec that the script is checked against.
+
+Challenges
+1. The challenge is knowing how to write for AI. Adult humans are much better at interpreting speaking styles than AI.
+Children and AI struggle in this regard. There is a distinct skill at knowing how to AI-speak.
+
+
+Speaker notes
+
+The idea is simple. Instead of writing a data transformation as code first, we write it in plain language, as numbered steps or at least a bulleted list. An AI model can read those instructions and apply them to a source dataset to produce the target result. For example, you might write out how to map a legacy collection spreadsheet to Darwin Core.
+
+Why bother? First, transformations are usually programmatic and hard to read unless you have specific technical skills. That creates a black box: often only one or two people really understand how the data gets from A to B. That limits who can engage, and when those people move on, the knowledge goes with them. Plain-language instructions take the black box away.
+
+Second, this lowers the bar for a task that has always been very technical. The curator who knows the data best can now read the transformation and say, "that's not right."
+
+Third, the AI reviews the instructions as well as carrying them out, and it's very good at spotting missing steps and ambiguous wording. I think of these models as a pattern-recognition savant with the whole internet at its fingertips, but with a child's grasp of your context. It notices every gap, and it will fill any gap you leave with a guess. So the review process pushes you toward documentation that is both more concise and more complete.
+
+Finally, the instructions double as a verification tool. Once a script exists, you can check it against the written procedure to confirm it does only what the instructions say. That's how you catch drift between what you meant and what the code actually does.
+
+

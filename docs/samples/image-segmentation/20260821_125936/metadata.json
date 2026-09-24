@@ -1,0 +1,1602 @@
+{
+  "source_image": "data/input/nhmuk/20260821_125936.jpg",
+  "source_name": "20260821_125936.jpg",
+  "image_size": {
+    "width": 4000,
+    "height": 1848
+  },
+  "n_segments": 15,
+  "diagnostics": {
+    "n_raw_masks": 117,
+    "n_backdrop_masks": 6,
+    "n_object_masks": 107,
+    "n_part_masks": 82,
+    "n_card_candidates": 0,
+    "n_labels": 25,
+    "n_specimens": 15,
+    "n_refined": 15,
+    "n_groups": 15,
+    "n_paired": 13,
+    "backdrop": {
+      "n_anchors": 3,
+      "anchor_frac": 0.62,
+      "mode": "grid2x4(8 local)",
+      "backdrop_frac": 0.669
+    }
+  },
+  "config": {
+    "input_dir": "data\\input\\nhmuk",
+    "output_dir": "data\\output",
+    "sam": {
+      "model": "sam2.1_b.pt",
+      "device": "",
+      "imgsz": 1024,
+      "tile_overlap": 0.25,
+      "points_stride": 24,
+      "points_batch_size": 64,
+      "conf_thres": 0.82,
+      "stability_score_thresh": 0.9,
+      "iou": 0.7,
+      "cross_tile_iou": 0.6
+    },
+    "grouping": {
+      "backdrop": {
+        "backdrop_seed_frac": 0.12,
+        "border_sides": 2,
+        "object_seed_frac": 0.015,
+        "bias": 0.0,
+        "prototypes": 5,
+        "object_max_area_frac": 0.055,
+        "oversized_background_frac": 0.3,
+        "max_background_frac": 0.85
+      },
+      "min_mask_area_frac": 0.00025,
+      "min_specimen_area_frac": 0.0016,
+      "close_radius_frac": 0.006,
+      "open_radius_frac": 0.004,
+      "sliver_span_frac": 0.92,
+      "sliver_thickness_frac": 0.13,
+      "sliver_max_aspect": 8.0,
+      "card_work_width": 2400,
+      "card_texture_sigma": 2.0,
+      "card_texture_ratio": 3.5,
+      "card_stroke_max_area_frac": 0.002,
+      "card_min_area_frac": 6e-05,
+      "card_max_area_frac": 0.02,
+      "card_aspect_range": [
+        1.2,
+        16.0
+      ],
+      "card_min_extent": 0.3,
+      "card_pad_x": 0.14,
+      "card_pad_y": 0.5,
+      "card_max_candidates": 400,
+      "label_min_area_frac": 0.0006,
+      "label_max_area_frac": 0.05,
+      "label_min_rect_fill": 0.8,
+      "label_min_solidity": 0.9,
+      "label_aspect_range": [
+        1.15,
+        7.0
+      ],
+      "label_min_value": 105,
+      "label_max_saturation": 95.0,
+      "label_min_text_blobs": 6,
+      "label_min_row_blobs": 4,
+      "label_min_ring_background": 0.35,
+      "label_ring_width_frac": 0.15,
+      "label_dilate_frac": 0.004,
+      "max_pair_distance_frac": 0.22,
+      "cost_above_overlapping": 1.0,
+      "cost_above_offset": 1.5,
+      "cost_beside": 1.9,
+      "cost_below": 2.4
+    },
+    "refine": {
+      "enabled": true,
+      "margin": 0.18,
+      "min_iou": 0.3,
+      "max_growth": 2.5
+    },
+    "ocr": {
+      "enabled": true,
+      "target_height": 260,
+      "max_upscale": 8.0,
+      "min_confidence": 0.3
+    },
+    "output": {
+      "crop_pad_frac": 0.04,
+      "write_cutout": true,
+      "write_crop": true,
+      "write_mask": true,
+      "write_pair": true,
+      "write_transcription": true,
+      "write_overview": true,
+      "overview_max_width": 2400,
+      "jpeg_quality": 92
+    },
+    "overwrite": true,
+    "debug": false
+  },
+  "segments": [
+    {
+      "id": "segment_01",
+      "kind": "specimen_with_label",
+      "bbox": [
+        0,
+        821,
+        176,
+        1326
+      ],
+      "transcription": "ting on yellow\nKent",
+      "specimen": {
+        "kind": "specimen",
+        "bbox": [
+          0,
+          821,
+          136,
+          1076
+        ],
+        "centroid": [
+          50.2,
+          936.3
+        ],
+        "area_px": 20731,
+        "score": 0.9858,
+        "stats": {
+          "area_frac": 0.0028,
+          "n_source_masks": 1,
+          "refine_iou": 0.96,
+          "refine_growth": 0.961,
+          "refined": true
+        }
+      },
+      "labels": [
+        {
+          "kind": "label",
+          "bbox": [
+            0,
+            1196,
+            176,
+            1326
+          ],
+          "centroid": [
+            84.4,
+            1259.3
+          ],
+          "area_px": 20028,
+          "score": 0.9849,
+          "stats": {
+            "rect_fill": 0.9167,
+            "solidity": 0.9915,
+            "aspect": 1.5308,
+            "angle": -3.7586,
+            "extent": 0.8753,
+            "area_frac": 0.0027,
+            "is_label": true,
+            "value_mean": 107.2513,
+            "saturation_mean": 61.4026,
+            "ring_background": 0.959,
+            "text_blobs": 21,
+            "text_row_blobs": 11,
+            "pair_cost": 271.5,
+            "text": "ting on yellow\nKent",
+            "ocr_confidence": 0.837
+          }
+        }
+      ],
+      "files": {
+        "labels": [
+          "label_01.png"
+        ],
+        "mineral": "mineral.png",
+        "mineral_mask": "mineral_mask.png",
+        "mineral_crop": "mineral_crop.jpg",
+        "transcription": "transcription.txt",
+        "pair": "pair.jpg"
+      }
+    },
+    {
+      "id": "segment_02",
+      "kind": "specimen_only",
+      "bbox": [
+        0,
+        1406,
+        346,
+        1773
+      ],
+      "transcription": "",
+      "specimen": {
+        "kind": "specimen",
+        "bbox": [
+          0,
+          1406,
+          346,
+          1773
+        ],
+        "centroid": [
+          169.7,
+          1598.3
+        ],
+        "area_px": 97156,
+        "score": 0.9825,
+        "stats": {
+          "area_frac": 0.0131,
+          "n_source_masks": 3,
+          "refine_iou": 0.962,
+          "refine_growth": 0.969,
+          "refined": true
+        }
+      },
+      "labels": [],
+      "files": {
+        "labels": [],
+        "mineral": "mineral.png",
+        "mineral_mask": "mineral_mask.png",
+        "mineral_crop": "mineral_crop.jpg",
+        "pair": "pair.jpg"
+      }
+    },
+    {
+      "id": "segment_03",
+      "kind": "specimen_with_label",
+      "bbox": [
+        48,
+        0,
+        1138,
+        636
+      ],
+      "transcription": "groups of grey tabular crystals\nAle and Cakes mine, Cornwall\n\nMowbray mine. Cumberland",
+      "specimen": {
+        "kind": "specimen",
+        "bbox": [
+          48,
+          0,
+          750,
+          483
+        ],
+        "centroid": [
+          389.4,
+          252.8
+        ],
+        "area_px": 229027,
+        "score": 0.9781,
+        "stats": {
+          "area_frac": 0.0289,
+          "n_source_masks": 10,
+          "refine_iou": 0.917,
+          "refine_growth": 1.054,
+          "refined": true
+        }
+      },
+      "labels": [
+        {
+          "kind": "label",
+          "bbox": [
+            208,
+            551,
+            557,
+            636
+          ],
+          "centroid": [
+            383.1,
+            595.3
+          ],
+          "area_px": 25443,
+          "score": 0.9905,
+          "stats": {
+            "rect_fill": 0.9155,
+            "solidity": 0.9684,
+            "aspect": 4.4067,
+            "angle": -1.6792,
+            "extent": 0.8577,
+            "area_frac": 0.0034,
+            "is_label": true,
+            "value_mean": 128.0906,
+            "saturation_mean": 55.5261,
+            "ring_background": 0.949,
+            "text_blobs": 58,
+            "text_row_blobs": 16,
+            "pair_cost": 200.4,
+            "text": "groups of grey tabular crystals\nAle and Cakes mine, Cornwall",
+            "ocr_confidence": 0.878
+          }
+        },
+        {
+          "kind": "label",
+          "bbox": [
+            824,
+            0,
+            1138,
+            50
+          ],
+          "centroid": [
+            975.8,
+            23.2
+          ],
+          "area_px": 14768,
+          "score": 0.9882,
+          "stats": {
+            "rect_fill": 0.9629,
+            "solidity": 1.0078,
+            "aspect": 6.3878,
+            "angle": -90.0,
+            "extent": 0.9406,
+            "area_frac": 0.002,
+            "is_label": true,
+            "value_mean": 114.9706,
+            "saturation_mean": 43.4859,
+            "ring_background": 0.648,
+            "text_blobs": 53,
+            "text_row_blobs": 25,
+            "pair_cost": 596.5,
+            "text": "Mowbray mine. Cumberland",
+            "ocr_confidence": 0.901
+          }
+        }
+      ],
+      "files": {
+        "labels": [
+          "label_01.png",
+          "label_02.png"
+        ],
+        "mineral": "mineral.png",
+        "mineral_mask": "mineral_mask.png",
+        "mineral_crop": "mineral_crop.jpg",
+        "transcription": "transcription.txt",
+        "pair": "pair.jpg"
+      }
+    },
+    {
+      "id": "segment_04",
+      "kind": "specimen_only",
+      "bbox": [
+        364,
+        1627,
+        1288,
+        1848
+      ],
+      "transcription": "",
+      "specimen": {
+        "kind": "specimen",
+        "bbox": [
+          364,
+          1627,
+          1288,
+          1848
+        ],
+        "centroid": [
+          890.4,
+          1769.8
+        ],
+        "area_px": 105659,
+        "score": 0.9846,
+        "stats": {
+          "area_frac": 0.0121,
+          "n_source_masks": 1,
+          "refine_iou": 0.63,
+          "refine_growth": 0.93,
+          "refined": true
+        }
+      },
+      "labels": [],
+      "files": {
+        "labels": [],
+        "mineral": "mineral.png",
+        "mineral_mask": "mineral_mask.png",
+        "mineral_crop": "mineral_crop.jpg",
+        "pair": "pair.jpg"
+      }
+    },
+    {
+      "id": "segment_05",
+      "kind": "specimen_with_label",
+      "bbox": [
+        434,
+        739,
+        1054,
+        1363
+      ],
+      "transcription": "section of stalactite: polished\nNewhaven, Derbyshire",
+      "specimen": {
+        "kind": "specimen",
+        "bbox": [
+          434,
+          739,
+          1054,
+          1208
+        ],
+        "centroid": [
+          738.1,
+          971.8
+        ],
+        "area_px": 224654,
+        "score": 0.9969,
+        "stats": {
+          "area_frac": 0.0303,
+          "n_source_masks": 2,
+          "refine_iou": 0.992,
+          "refine_growth": 0.997,
+          "refined": true
+        }
+      },
+      "labels": [
+        {
+          "kind": "label",
+          "bbox": [
+            587,
+            1266,
+            945,
+            1363
+          ],
+          "centroid": [
+            766.5,
+            1314.4
+          ],
+          "area_px": 30408,
+          "score": 0.9844,
+          "stats": {
+            "rect_fill": 0.945,
+            "solidity": 0.9857,
+            "aspect": 4.0146,
+            "angle": -1.6918,
+            "extent": 0.8757,
+            "area_frac": 0.0041,
+            "is_label": true,
+            "value_mean": 131.6828,
+            "saturation_mean": 48.7527,
+            "ring_background": 0.994,
+            "text_blobs": 56,
+            "text_row_blobs": 18,
+            "pair_cost": 194.5,
+            "text": "section of stalactite: polished\nNewhaven, Derbyshire",
+            "ocr_confidence": 0.915
+          }
+        }
+      ],
+      "files": {
+        "labels": [
+          "label_01.png"
+        ],
+        "mineral": "mineral.png",
+        "mineral_mask": "mineral_mask.png",
+        "mineral_crop": "mineral_crop.jpg",
+        "transcription": "transcription.txt",
+        "pair": "pair.jpg"
+      }
+    },
+    {
+      "id": "segment_06",
+      "kind": "specimen_with_label",
+      "bbox": [
+        954,
+        186,
+        1630,
+        762
+      ],
+      "transcription": "group of tinged crystals showing\nparallel growth\nPallaflat mine, Cumberland",
+      "specimen": {
+        "kind": "specimen",
+        "bbox": [
+          954,
+          186,
+          1630,
+          602
+        ],
+        "centroid": [
+          1278.9,
+          385.6
+        ],
+        "area_px": 178137,
+        "score": 0.9861,
+        "stats": {
+          "area_frac": 0.0169,
+          "n_source_masks": 6,
+          "refine_iou": 0.687,
+          "refine_growth": 1.413,
+          "refined": true
+        }
+      },
+      "labels": [
+        {
+          "kind": "label",
+          "bbox": [
+            1167,
+            652,
+            1517,
+            762
+          ],
+          "centroid": [
+            1342.1,
+            708.4
+          ],
+          "area_px": 34856,
+          "score": 0.9855,
+          "stats": {
+            "rect_fill": 0.9545,
+            "solidity": 0.9837,
+            "aspect": 3.3877,
+            "angle": -1.611,
+            "extent": 0.9054,
+            "area_frac": 0.0047,
+            "is_label": true,
+            "value_mean": 150.0075,
+            "saturation_mean": 35.8328,
+            "ring_background": 0.997,
+            "text_blobs": 70,
+            "text_row_blobs": 21,
+            "pair_cost": 194.5,
+            "text": "group of tinged crystals showing\nparallel growth\nPallaflat mine, Cumberland",
+            "ocr_confidence": 0.912
+          }
+        },
+        {
+          "kind": "label",
+          "bbox": [
+            1386,
+            485,
+            1465,
+            593
+          ],
+          "centroid": [
+            1425.1,
+            538.9
+          ],
+          "area_px": 8000,
+          "score": 0.9285,
+          "stats": {
+            "rect_fill": 0.9585,
+            "solidity": 0.9968,
+            "aspect": 1.3718,
+            "angle": -90.0,
+            "extent": 0.9376,
+            "area_frac": 0.0011,
+            "is_label": true,
+            "value_mean": 115.0474,
+            "saturation_mean": 35.3058,
+            "ring_background": 0.621,
+            "text_blobs": 40,
+            "text_row_blobs": 7,
+            "pair_cost": 88.1,
+            "text": "",
+            "ocr_confidence": 0.0
+          }
+        }
+      ],
+      "files": {
+        "labels": [
+          "label_01.png",
+          "label_02.png"
+        ],
+        "mineral": "mineral.png",
+        "mineral_mask": "mineral_mask.png",
+        "mineral_crop": "mineral_crop.jpg",
+        "transcription": "transcription.txt",
+        "pair": "pair.jpg"
+      }
+    },
+    {
+      "id": "segment_07",
+      "kind": "specimen_with_label",
+      "bbox": [
+        1455,
+        876,
+        2020,
+        1475
+      ],
+      "transcription": "tabular crystals with fluorite\non hematite\nFlorence mine, Cumberland",
+      "specimen": {
+        "kind": "specimen",
+        "bbox": [
+          1455,
+          878,
+          2020,
+          1279
+        ],
+        "centroid": [
+          1733.0,
+          1069.0
+        ],
+        "area_px": 168641,
+        "score": 0.9685,
+        "stats": {
+          "area_frac": 0.0199,
+          "n_source_masks": 13,
+          "refine_iou": 0.785,
+          "refine_growth": 1.044,
+          "refined": true
+        }
+      },
+      "labels": [
+        {
+          "kind": "label",
+          "bbox": [
+            1555,
+            1340,
+            1892,
+            1475
+          ],
+          "centroid": [
+            1722.3,
+            1407.7
+          ],
+          "area_px": 39177,
+          "score": 0.9902,
+          "stats": {
+            "rect_fill": 0.9702,
+            "solidity": 0.9882,
+            "aspect": 2.8345,
+            "angle": -2.9108,
+            "extent": 0.8611,
+            "area_frac": 0.0053,
+            "is_label": true,
+            "value_mean": 148.1888,
+            "saturation_mean": 40.8454,
+            "ring_background": 0.984,
+            "text_blobs": 65,
+            "text_row_blobs": 15,
+            "pair_cost": 216.8,
+            "text": "tabular crystals with fluorite\non hematite\nFlorence mine, Cumberland",
+            "ocr_confidence": 0.903
+          }
+        },
+        {
+          "kind": "label",
+          "bbox": [
+            1862,
+            876,
+            1988,
+            927
+          ],
+          "centroid": [
+            1922.2,
+            902.0
+          ],
+          "area_px": 4771,
+          "score": 0.9498,
+          "stats": {
+            "rect_fill": 0.8157,
+            "solidity": 0.9632,
+            "aspect": 2.7063,
+            "angle": -86.7755,
+            "extent": 0.7425,
+            "area_frac": 0.0006,
+            "is_label": true,
+            "value_mean": 163.7101,
+            "saturation_mean": 37.5215,
+            "ring_background": 0.446,
+            "text_blobs": 28,
+            "text_row_blobs": 8,
+            "pair_cost": 211.5,
+            "text": "",
+            "ocr_confidence": 0.0
+          }
+        }
+      ],
+      "files": {
+        "labels": [
+          "label_01.png",
+          "label_02.png"
+        ],
+        "mineral": "mineral.png",
+        "mineral_mask": "mineral_mask.png",
+        "mineral_crop": "mineral_crop.jpg",
+        "transcription": "transcription.txt",
+        "pair": "pair.jpg"
+      }
+    },
+    {
+      "id": "segment_08",
+      "kind": "specimen_with_label",
+      "bbox": [
+        1775,
+        0,
+        2598,
+        811
+      ],
+      "transcription": "crystals showing change of habit:\nwithdolomlte\nMowbray mine, Cumberland\n\nsheaf of platy crystals\nForce e Crag mine, Cumberland\n\nParksidemine, Cumberland",
+      "specimen": {
+        "kind": "specimen",
+        "bbox": [
+          1775,
+          363,
+          2146,
+          701
+        ],
+        "centroid": [
+          1970.8,
+          535.2
+        ],
+        "area_px": 98918,
+        "score": 0.9828,
+        "stats": {
+          "area_frac": 0.0134,
+          "n_source_masks": 2,
+          "refine_iou": 0.416,
+          "refine_growth": 0.42,
+          "refined": true
+        }
+      },
+      "labels": [
+        {
+          "kind": "label",
+          "bbox": [
+            1780,
+            115,
+            2105,
+            210
+          ],
+          "centroid": [
+            1941.5,
+            162.7
+          ],
+          "area_px": 28637,
+          "score": 0.9867,
+          "stats": {
+            "rect_fill": 0.9608,
+            "solidity": 0.9789,
+            "aspect": 3.5107,
+            "angle": -0.5846,
+            "extent": 0.9275,
+            "area_frac": 0.0039,
+            "is_label": true,
+            "value_mean": 145.5583,
+            "saturation_mean": 32.9077,
+            "ring_background": 0.943,
+            "text_blobs": 72,
+            "text_row_blobs": 22,
+            "pair_cost": 692.1,
+            "text": "crystals showing change of habit:\nwithdolomlte\nMowbray mine, Cumberland",
+            "ocr_confidence": 0.886
+          }
+        },
+        {
+          "kind": "label",
+          "bbox": [
+            1849,
+            734,
+            2174,
+            811
+          ],
+          "centroid": [
+            2010.5,
+            772.5
+          ],
+          "area_px": 23439,
+          "score": 0.98,
+          "stats": {
+            "rect_fill": 0.9567,
+            "solidity": 0.9779,
+            "aspect": 4.2842,
+            "angle": -0.2146,
+            "extent": 0.9366,
+            "area_frac": 0.0032,
+            "is_label": true,
+            "value_mean": 166.3343,
+            "saturation_mean": 34.0644,
+            "ring_background": 0.932,
+            "text_blobs": 47,
+            "text_row_blobs": 23,
+            "pair_cost": 159.6,
+            "text": "sheaf of platy crystals\nForce e Crag mine, Cumberland",
+            "ocr_confidence": 0.862
+          }
+        },
+        {
+          "kind": "label",
+          "bbox": [
+            2331,
+            0,
+            2598,
+            39
+          ],
+          "centroid": [
+            2458.8,
+            17.6
+          ],
+          "area_px": 9571,
+          "score": 0.9176,
+          "stats": {
+            "rect_fill": 0.9469,
+            "solidity": 1.0119,
+            "aspect": 7.0,
+            "angle": -90.0,
+            "extent": 0.9191,
+            "area_frac": 0.0013,
+            "is_label": true,
+            "value_mean": 129.1194,
+            "saturation_mean": 29.293,
+            "ring_background": 0.971,
+            "text_blobs": 33,
+            "text_row_blobs": 15,
+            "pair_cost": 1052.8,
+            "text": "Parksidemine, Cumberland",
+            "ocr_confidence": 0.904
+          }
+        },
+        {
+          "kind": "label",
+          "bbox": [
+            2152,
+            474,
+            2205,
+            651
+          ],
+          "centroid": [
+            2175.0,
+            554.0
+          ],
+          "area_px": 7403,
+          "score": 0.9733,
+          "stats": {
+            "rect_fill": 0.8089,
+            "solidity": 0.9925,
+            "aspect": 3.3846,
+            "angle": -90.0,
+            "extent": 0.7891,
+            "area_frac": 0.001,
+            "is_label": true,
+            "value_mean": 179.7346,
+            "saturation_mean": 26.5529,
+            "ring_background": 0.522,
+            "text_blobs": 44,
+            "text_row_blobs": 6,
+            "pair_cost": 175.6,
+            "text": "",
+            "ocr_confidence": 0.0
+          }
+        }
+      ],
+      "files": {
+        "labels": [
+          "label_01.png",
+          "label_02.png",
+          "label_03.png",
+          "label_04.png"
+        ],
+        "mineral": "mineral.png",
+        "mineral_mask": "mineral_mask.png",
+        "mineral_crop": "mineral_crop.jpg",
+        "transcription": "transcription.txt",
+        "pair": "pair.jpg"
+      }
+    },
+    {
+      "id": "segment_09",
+      "kind": "specimen_with_label",
+      "bbox": [
+        1937,
+        1353,
+        2327,
+        1762
+      ],
+      "transcription": "tabular crystal partly encrusted\nwith campylite\nDrygill, Cumberland",
+      "specimen": {
+        "kind": "specimen",
+        "bbox": [
+          2063,
+          1353,
+          2250,
+          1553
+        ],
+        "centroid": [
+          2164.7,
+          1452.0
+        ],
+        "area_px": 29922,
+        "score": 0.9545,
+        "stats": {
+          "area_frac": 0.004,
+          "n_source_masks": 3,
+          "refine_iou": 0.701,
+          "refine_growth": 0.719,
+          "refined": true
+        }
+      },
+      "labels": [
+        {
+          "kind": "label",
+          "bbox": [
+            1937,
+            1616,
+            2327,
+            1762
+          ],
+          "centroid": [
+            2129.7,
+            1688.4
+          ],
+          "area_px": 52499,
+          "score": 0.9861,
+          "stats": {
+            "rect_fill": 0.9774,
+            "solidity": 0.9904,
+            "aspect": 2.8014,
+            "angle": -1.2454,
+            "extent": 0.922,
+            "area_frac": 0.0071,
+            "is_label": true,
+            "value_mean": 152.673,
+            "saturation_mean": 37.8269,
+            "ring_background": 0.947,
+            "text_blobs": 63,
+            "text_row_blobs": 25,
+            "pair_cost": 223.5,
+            "text": "tabular crystal partly encrusted\nwith campylite\nDrygill, Cumberland",
+            "ocr_confidence": 0.903
+          }
+        }
+      ],
+      "files": {
+        "labels": [
+          "label_01.png"
+        ],
+        "mineral": "mineral.png",
+        "mineral_mask": "mineral_mask.png",
+        "mineral_crop": "mineral_crop.jpg",
+        "transcription": "transcription.txt",
+        "pair": "pair.jpg"
+      }
+    },
+    {
+      "id": "segment_10",
+      "kind": "specimen_with_label",
+      "bbox": [
+        2268,
+        553,
+        2755,
+        1270
+      ],
+      "transcription": "Baryte\nBaso\nOrthorhombic\n\nzoned crystal showing parallel\ngrowth\nFrizington, Cumberland",
+      "specimen": {
+        "kind": "specimen",
+        "bbox": [
+          2270,
+          782,
+          2664,
+          1113
+        ],
+        "centroid": [
+          2444.7,
+          959.8
+        ],
+        "area_px": 95899,
+        "score": 0.965,
+        "stats": {
+          "area_frac": 0.0129,
+          "n_source_masks": 2,
+          "refine_iou": 0.89,
+          "refine_growth": 0.906,
+          "refined": true
+        }
+      },
+      "labels": [
+        {
+          "kind": "label",
+          "bbox": [
+            2455,
+            553,
+            2755,
+            768
+          ],
+          "centroid": [
+            2602.6,
+            660.1
+          ],
+          "area_px": 57115,
+          "score": 0.9965,
+          "stats": {
+            "rect_fill": 0.929,
+            "solidity": 0.9893,
+            "aspect": 1.4015,
+            "angle": -1.9525,
+            "extent": 0.8855,
+            "area_frac": 0.0077,
+            "is_label": true,
+            "value_mean": 214.3421,
+            "saturation_mean": 8.2654,
+            "ring_background": 0.964,
+            "text_blobs": 23,
+            "text_row_blobs": 10,
+            "pair_cost": 504.0,
+            "text": "Baryte\nBaso\nOrthorhombic",
+            "ocr_confidence": 0.8
+          }
+        },
+        {
+          "kind": "label",
+          "bbox": [
+            2268,
+            1150,
+            2612,
+            1270
+          ],
+          "centroid": [
+            2437.9,
+            1209.8
+          ],
+          "area_px": 36973,
+          "score": 0.9914,
+          "stats": {
+            "rect_fill": 0.948,
+            "solidity": 0.9818,
+            "aspect": 2.9805,
+            "angle": -1.4879,
+            "extent": 0.8957,
+            "area_frac": 0.005,
+            "is_label": true,
+            "value_mean": 164.9932,
+            "saturation_mean": 34.1696,
+            "ring_background": 0.973,
+            "text_blobs": 62,
+            "text_row_blobs": 18,
+            "pair_cost": 185.0,
+            "text": "zoned crystal showing parallel\ngrowth\nFrizington, Cumberland",
+            "ocr_confidence": 0.89
+          }
+        }
+      ],
+      "files": {
+        "labels": [
+          "label_01.png",
+          "label_02.png"
+        ],
+        "mineral": "mineral.png",
+        "mineral_mask": "mineral_mask.png",
+        "mineral_crop": "mineral_crop.jpg",
+        "transcription": "transcription.txt",
+        "pair": "pair.jpg"
+      }
+    },
+    {
+      "id": "segment_11",
+      "kind": "specimen_with_label",
+      "bbox": [
+        2280,
+        0,
+        3882,
+        670
+      ],
+      "transcription": "doubly.\n\ntabular crystal penetrating\ndolomite\nMowbraymine,Cumberland\n\ndoubly-terminated prism\nParkside mine, Cumberland",
+      "specimen": {
+        "kind": "specimen",
+        "bbox": [
+          2941,
+          0,
+          3882,
+          499
+        ],
+        "centroid": [
+          3400.6,
+          221.4
+        ],
+        "area_px": 336847,
+        "score": 0.9695,
+        "stats": {
+          "area_frac": 0.0389,
+          "n_source_masks": 9,
+          "refine_iou": 0.842,
+          "refine_growth": 1.158,
+          "refined": true
+        }
+      },
+      "labels": [
+        {
+          "kind": "label",
+          "bbox": [
+            2280,
+            207,
+            2805,
+            344
+          ],
+          "centroid": [
+            2541.3,
+            275.7
+          ],
+          "area_px": 55857,
+          "score": 0.9884,
+          "stats": {
+            "rect_fill": 0.9334,
+            "solidity": 0.9862,
+            "aspect": 4.6843,
+            "angle": -3.5763,
+            "extent": 0.7766,
+            "area_frac": 0.0076,
+            "is_label": true,
+            "value_mean": 136.0708,
+            "saturation_mean": 61.9894,
+            "ring_background": 0.892,
+            "text_blobs": 48,
+            "text_row_blobs": 6,
+            "pair_cost": 731.8,
+            "text": "doubly.",
+            "ocr_confidence": 0.768
+          }
+        },
+        {
+          "kind": "label",
+          "bbox": [
+            3169,
+            566,
+            3481,
+            670
+          ],
+          "centroid": [
+            3323.3,
+            618.5
+          ],
+          "area_px": 29144,
+          "score": 0.9858,
+          "stats": {
+            "rect_fill": 0.9378,
+            "solidity": 0.9852,
+            "aspect": 3.0872,
+            "angle": -1.0649,
+            "extent": 0.8982,
+            "area_frac": 0.0039,
+            "is_label": true,
+            "value_mean": 167.0389,
+            "saturation_mean": 28.6243,
+            "ring_background": 0.959,
+            "text_blobs": 59,
+            "text_row_blobs": 17,
+            "pair_cost": 207.7,
+            "text": "tabular crystal penetrating\ndolomite\nMowbraymine,Cumberland",
+            "ocr_confidence": 0.894
+          }
+        },
+        {
+          "kind": "label",
+          "bbox": [
+            3152,
+            0,
+            3234,
+            288
+          ],
+          "centroid": [
+            3195.4,
+            133.9
+          ],
+          "area_px": 20725,
+          "score": 0.9413,
+          "stats": {
+            "rect_fill": 0.8915,
+            "solidity": 0.9917,
+            "aspect": 3.5432,
+            "angle": -90.0,
+            "extent": 0.8776,
+            "area_frac": 0.0028,
+            "is_label": true,
+            "value_mean": 108.3809,
+            "saturation_mean": 21.8277,
+            "ring_background": 0.442,
+            "text_blobs": 36,
+            "text_row_blobs": 4,
+            "pair_cost": 211.5,
+            "text": "",
+            "ocr_confidence": 0.0
+          }
+        },
+        {
+          "kind": "label",
+          "bbox": [
+            2431,
+            347,
+            2714,
+            421
+          ],
+          "centroid": [
+            2571.6,
+            384.4
+          ],
+          "area_px": 18670,
+          "score": 0.9653,
+          "stats": {
+            "rect_fill": 0.9463,
+            "solidity": 0.9787,
+            "aspect": 4.0144,
+            "angle": -1.4502,
+            "extent": 0.8915,
+            "area_frac": 0.0025,
+            "is_label": true,
+            "value_mean": 169.286,
+            "saturation_mean": 25.5869,
+            "ring_background": 0.905,
+            "text_blobs": 78,
+            "text_row_blobs": 18,
+            "pair_cost": 686.2,
+            "text": "doubly-terminated prism\nParkside mine, Cumberland",
+            "ocr_confidence": 0.907
+          }
+        }
+      ],
+      "files": {
+        "labels": [
+          "label_01.png",
+          "label_02.png",
+          "label_03.png",
+          "label_04.png"
+        ],
+        "mineral": "mineral.png",
+        "mineral_mask": "mineral_mask.png",
+        "mineral_crop": "mineral_crop.jpg",
+        "transcription": "transcription.txt",
+        "pair": "pair.jpg"
+      }
+    },
+    {
+      "id": "segment_12",
+      "kind": "specimen_with_label",
+      "bbox": [
+        2404,
+        1699,
+        2988,
+        1848
+      ],
+      "transcription": "clear prismatic crystal\nChirbury,Shropshire",
+      "specimen": {
+        "kind": "specimen",
+        "bbox": [
+          2404,
+          1702,
+          2601,
+          1848
+        ],
+        "centroid": [
+          2492.0,
+          1788.1
+        ],
+        "area_px": 17852,
+        "score": 0.9419,
+        "stats": {
+          "area_frac": 0.0024,
+          "n_source_masks": 2,
+          "refine_iou": 0.966,
+          "refine_growth": 1.011,
+          "refined": true
+        }
+      },
+      "labels": [
+        {
+          "kind": "label",
+          "bbox": [
+            2707,
+            1699,
+            2988,
+            1804
+          ],
+          "centroid": [
+            2847.2,
+            1751.8
+          ],
+          "area_px": 25370,
+          "score": 0.9868,
+          "stats": {
+            "rect_fill": 0.9494,
+            "solidity": 0.9828,
+            "aspect": 2.8718,
+            "angle": -2.5448,
+            "extent": 0.8599,
+            "area_frac": 0.0034,
+            "is_label": true,
+            "value_mean": 160.4168,
+            "saturation_mean": 32.1351,
+            "ring_background": 0.947,
+            "text_blobs": 47,
+            "text_row_blobs": 16,
+            "pair_cost": 635.3,
+            "text": "clear prismatic crystal\nChirbury,Shropshire",
+            "ocr_confidence": 0.89
+          }
+        }
+      ],
+      "files": {
+        "labels": [
+          "label_01.png"
+        ],
+        "mineral": "mineral.png",
+        "mineral_mask": "mineral_mask.png",
+        "mineral_crop": "mineral_crop.jpg",
+        "transcription": "transcription.txt",
+        "pair": "pair.jpg"
+      }
+    },
+    {
+      "id": "segment_13",
+      "kind": "specimen_with_label",
+      "bbox": [
+        2628,
+        797,
+        3436,
+        1658
+      ],
+      "transcription": "smatic",
+      "specimen": {
+        "kind": "specimen",
+        "bbox": [
+          2860,
+          799,
+          3308,
+          1156
+        ],
+        "centroid": [
+          3051.6,
+          927.0
+        ],
+        "area_px": 55994,
+        "score": 0.9603,
+        "stats": {
+          "area_frac": 0.0072,
+          "n_source_masks": 8,
+          "refine_iou": 0.916,
+          "refine_growth": 1.033,
+          "refined": true
+        }
+      },
+      "labels": [
+        {
+          "kind": "label",
+          "bbox": [
+            2628,
+            1291,
+            2929,
+            1658
+          ],
+          "centroid": [
+            2779.8,
+            1486.0
+          ],
+          "area_px": 75951,
+          "score": 0.9891,
+          "stats": {
+            "rect_fill": 0.8691,
+            "solidity": 0.9649,
+            "aspect": 1.5419,
+            "angle": -70.949,
+            "extent": 0.6875,
+            "area_frac": 0.0103,
+            "is_label": true,
+            "value_mean": 145.0854,
+            "saturation_mean": 17.5684,
+            "ring_background": 0.973,
+            "text_blobs": 66,
+            "text_row_blobs": 6,
+            "pair_cost": 427.8,
+            "text": "smatic",
+            "ocr_confidence": 0.807
+          }
+        },
+        {
+          "kind": "label",
+          "bbox": [
+            2936,
+            797,
+            3436,
+            1252
+          ],
+          "centroid": [
+            3202.5,
+            1004.5
+          ],
+          "area_px": 62425,
+          "score": 0.9562,
+          "stats": {
+            "rect_fill": 0.9625,
+            "solidity": 1.1896,
+            "aspect": 3.0398,
+            "angle": -38.4373,
+            "extent": 0.2744,
+            "area_frac": 0.0084,
+            "is_label": true,
+            "value_mean": 133.2577,
+            "saturation_mean": 11.9068,
+            "ring_background": 0.392,
+            "text_blobs": 50,
+            "text_row_blobs": 5,
+            "pair_cost": 88.1,
+            "text": "",
+            "ocr_confidence": 0.0
+          }
+        }
+      ],
+      "files": {
+        "labels": [
+          "label_01.png",
+          "label_02.png"
+        ],
+        "mineral": "mineral.png",
+        "mineral_mask": "mineral_mask.png",
+        "mineral_crop": "mineral_crop.jpg",
+        "transcription": "transcription.txt",
+        "pair": "pair.jpg"
+      }
+    },
+    {
+      "id": "segment_14",
+      "kind": "specimen_with_label",
+      "bbox": [
+        3126,
+        916,
+        3761,
+        1848
+      ],
+      "transcription": "group of blue tabular crystals\nFrizington, Cumberland",
+      "specimen": {
+        "kind": "specimen",
+        "bbox": [
+          3139,
+          916,
+          3523,
+          1281
+        ],
+        "centroid": [
+          3358.4,
+          1119.2
+        ],
+        "area_px": 81050,
+        "score": 0.9599,
+        "stats": {
+          "area_frac": 0.0087,
+          "n_source_masks": 7,
+          "refine_iou": 0.733,
+          "refine_growth": 1.195,
+          "refined": true
+        }
+      },
+      "labels": [
+        {
+          "kind": "label",
+          "bbox": [
+            3373,
+            1652,
+            3761,
+            1848
+          ],
+          "centroid": [
+            3556.4,
+            1760.5
+          ],
+          "area_px": 63929,
+          "score": 0.9773,
+          "stats": {
+            "rect_fill": 0.8471,
+            "solidity": 0.9877,
+            "aspect": 1.9846,
+            "angle": -90.0,
+            "extent": 0.8406,
+            "area_frac": 0.0086,
+            "is_label": true,
+            "value_mean": 126.3272,
+            "saturation_mean": 24.1523,
+            "ring_background": 0.951,
+            "text_blobs": 46,
+            "text_row_blobs": 4,
+            "pair_cost": 568.8,
+            "text": "",
+            "ocr_confidence": 0.0
+          }
+        },
+        {
+          "kind": "label",
+          "bbox": [
+            3126,
+            1345,
+            3479,
+            1439
+          ],
+          "centroid": [
+            3301.1,
+            1391.7
+          ],
+          "area_px": 28706,
+          "score": 0.9839,
+          "stats": {
+            "rect_fill": 0.9378,
+            "solidity": 0.981,
+            "aspect": 4.0181,
+            "angle": -1.4144,
+            "extent": 0.8651,
+            "area_frac": 0.0039,
+            "is_label": true,
+            "value_mean": 161.5984,
+            "saturation_mean": 29.1434,
+            "ring_background": 0.964,
+            "text_blobs": 57,
+            "text_row_blobs": 19,
+            "pair_cost": 198.8,
+            "text": "group of blue tabular crystals\nFrizington, Cumberland",
+            "ocr_confidence": 0.93
+          }
+        }
+      ],
+      "files": {
+        "labels": [
+          "label_01.png",
+          "label_02.png"
+        ],
+        "mineral": "mineral.png",
+        "mineral_mask": "mineral_mask.png",
+        "mineral_crop": "mineral_crop.jpg",
+        "transcription": "transcription.txt",
+        "pair": "pair.jpg"
+      }
+    },
+    {
+      "id": "segment_15",
+      "kind": "specimen_with_label",
+      "bbox": [
+        3735,
+        1165,
+        4000,
+        1726
+      ],
+      "transcription": "group\nSilver",
+      "specimen": {
+        "kind": "specimen",
+        "bbox": [
+          3735,
+          1165,
+          4000,
+          1510
+        ],
+        "centroid": [
+          3893.7,
+          1311.4
+        ],
+        "area_px": 58779,
+        "score": 0.9456,
+        "stats": {
+          "area_frac": 0.0077,
+          "n_source_masks": 2,
+          "refine_iou": 0.96,
+          "refine_growth": 1.027,
+          "refined": true
+        }
+      },
+      "labels": [
+        {
+          "kind": "label",
+          "bbox": [
+            3921,
+            1634,
+            4000,
+            1726
+          ],
+          "centroid": [
+            3965.1,
+            1676.8
+          ],
+          "area_px": 6256,
+          "score": 0.963,
+          "stats": {
+            "rect_fill": 0.8814,
+            "solidity": 1.0087,
+            "aspect": 1.1667,
+            "angle": -90.0,
+            "extent": 0.8608,
+            "area_frac": 0.0008,
+            "is_label": true,
+            "value_mean": 155.3953,
+            "saturation_mean": 24.1937,
+            "ring_background": 0.63,
+            "text_blobs": 21,
+            "text_row_blobs": 4,
+            "pair_cost": 254.9,
+            "text": "group\nSilver",
+            "ocr_confidence": 0.705
+          }
+        }
+      ],
+      "files": {
+        "labels": [
+          "label_01.png"
+        ],
+        "mineral": "mineral.png",
+        "mineral_mask": "mineral_mask.png",
+        "mineral_crop": "mineral_crop.jpg",
+        "transcription": "transcription.txt",
+        "pair": "pair.jpg"
+      }
+    }
+  ]
+}
