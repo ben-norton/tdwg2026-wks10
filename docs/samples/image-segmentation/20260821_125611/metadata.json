@@ -1,0 +1,2690 @@
+{
+  "source_image": "data/input/nhmuk/20260821_125611.jpg",
+  "source_name": "20260821_125611.jpg",
+  "image_size": {
+    "width": 4000,
+    "height": 1848
+  },
+  "n_segments": 39,
+  "diagnostics": {
+    "n_raw_masks": 145,
+    "n_backdrop_masks": 24,
+    "n_object_masks": 117,
+    "n_part_masks": 109,
+    "n_card_candidates": 75,
+    "n_labels": 27,
+    "n_specimens": 39,
+    "n_refined": 39,
+    "n_groups": 39,
+    "n_paired": 25,
+    "backdrop": {
+      "n_anchors": 2,
+      "anchor_frac": 0.607,
+      "mode": "grid2x4(8 local)",
+      "backdrop_frac": 0.678
+    }
+  },
+  "config": {
+    "input_dir": "data\\input\\nhmuk\\20260821_125611.jpg",
+    "output_dir": "data\\output\\nhmuk",
+    "sam": {
+      "version": "2",
+      "model": "sam2.1_b.pt",
+      "device": "",
+      "imgsz": 1024,
+      "tile_overlap": 0.25,
+      "points_stride": 24,
+      "points_batch_size": 64,
+      "conf_thres": 0.82,
+      "stability_score_thresh": 0.9,
+      "iou": 0.7,
+      "cross_tile_iou": 0.6
+    },
+    "grouping": {
+      "backdrop": {
+        "backdrop_seed_frac": 0.12,
+        "border_sides": 2,
+        "object_seed_frac": 0.015,
+        "bias": 0.0,
+        "prototypes": 5,
+        "object_max_area_frac": 0.055,
+        "oversized_background_frac": 0.3,
+        "max_background_frac": 0.85
+      },
+      "min_mask_area_frac": 0.00025,
+      "min_specimen_area_frac": 0.0016,
+      "close_radius_frac": 0.006,
+      "open_radius_frac": 0.004,
+      "sliver_span_frac": 0.92,
+      "sliver_thickness_frac": 0.13,
+      "sliver_max_aspect": 8.0,
+      "card_work_width": 2400,
+      "card_texture_sigma": 2.0,
+      "card_texture_ratio": 3.5,
+      "card_stroke_max_area_frac": 0.002,
+      "card_min_area_frac": 6e-05,
+      "card_max_area_frac": 0.02,
+      "card_aspect_range": [
+        1.2,
+        16.0
+      ],
+      "card_min_extent": 0.3,
+      "card_pad_x": 0.14,
+      "card_pad_y": 0.5,
+      "card_max_candidates": 400,
+      "label_min_area_frac": 0.0006,
+      "label_max_area_frac": 0.05,
+      "label_min_rect_fill": 0.8,
+      "label_min_solidity": 0.9,
+      "label_aspect_range": [
+        1.15,
+        7.0
+      ],
+      "label_min_value": 105,
+      "label_max_saturation": 95.0,
+      "label_min_text_blobs": 6,
+      "label_min_row_blobs": 4,
+      "label_min_ring_background": 0.35,
+      "label_ring_width_frac": 0.15,
+      "label_dilate_frac": 0.004,
+      "max_pair_distance_frac": 0.22,
+      "cost_above_overlapping": 1.0,
+      "cost_above_offset": 1.5,
+      "cost_beside": 1.9,
+      "cost_below": 2.4
+    },
+    "refine": {
+      "enabled": true,
+      "margin": 0.18,
+      "min_iou": 0.3,
+      "max_growth": 2.5
+    },
+    "ocr": {
+      "enabled": true,
+      "target_height": 260,
+      "max_upscale": 8.0,
+      "min_confidence": 0.3
+    },
+    "output": {
+      "crop_pad_frac": 0.04,
+      "write_cutout": true,
+      "write_crop": true,
+      "write_mask": true,
+      "write_pair": true,
+      "write_transcription": true,
+      "write_overview": true,
+      "overview_max_width": 2400,
+      "jpeg_quality": 92
+    },
+    "overwrite": false,
+    "debug": false,
+    "dataset_config": "data\\input\\nhmuk\\config.json"
+  },
+  "segments": [
+    {
+      "id": "segment_01",
+      "kind": "specimen_only",
+      "bbox": [
+        0,
+        0,
+        272,
+        621
+      ],
+      "transcription": "",
+      "specimen": {
+        "kind": "specimen",
+        "bbox": [
+          0,
+          0,
+          272,
+          621
+        ],
+        "centroid": [
+          91.9,
+          215.0
+        ],
+        "area_px": 86442,
+        "score": 0.9716,
+        "stats": {
+          "area_frac": 0.0115,
+          "n_source_masks": 2,
+          "refine_iou": 0.944,
+          "refine_growth": 0.979,
+          "refined": true
+        }
+      },
+      "labels": [],
+      "files": {
+        "labels": [],
+        "mineral": "mineral.png",
+        "mineral_mask": "mineral_mask.png",
+        "mineral_crop": "mineral_crop.jpg",
+        "pair": "pair.jpg"
+      }
+    },
+    {
+      "id": "segment_02",
+      "kind": "specimen_only",
+      "bbox": [
+        0,
+        780,
+        183,
+        1048
+      ],
+      "transcription": "",
+      "specimen": {
+        "kind": "specimen",
+        "bbox": [
+          0,
+          780,
+          183,
+          1048
+        ],
+        "centroid": [
+          60.3,
+          939.7
+        ],
+        "area_px": 25459,
+        "score": 0.9871,
+        "stats": {
+          "area_frac": 0.0034,
+          "n_source_masks": 2,
+          "refine_iou": 0.555,
+          "refine_growth": 0.583,
+          "refined": true
+        }
+      },
+      "labels": [],
+      "files": {
+        "labels": [],
+        "mineral": "mineral.png",
+        "mineral_mask": "mineral_mask.png",
+        "mineral_crop": "mineral_crop.jpg",
+        "pair": "pair.jpg"
+      }
+    },
+    {
+      "id": "segment_03",
+      "kind": "specimen_with_label",
+      "bbox": [
+        0,
+        1087,
+        209,
+        1297
+      ],
+      "transcription": "",
+      "specimen": {
+        "kind": "specimen",
+        "bbox": [
+          0,
+          1087,
+          209,
+          1220
+        ],
+        "centroid": [
+          98.7,
+          1154.1
+        ],
+        "area_px": 22171,
+        "score": 0.9835,
+        "stats": {
+          "area_frac": 0.003,
+          "n_source_masks": 1,
+          "refine_iou": 0.966,
+          "refine_growth": 0.99,
+          "refined": true
+        }
+      },
+      "labels": [
+        {
+          "kind": "label",
+          "bbox": [
+            0,
+            1219,
+            179,
+            1297
+          ],
+          "centroid": [
+            87.1,
+            1266.4
+          ],
+          "area_px": 9162,
+          "score": 1.0,
+          "stats": {
+            "rect_fill": 0.8992,
+            "solidity": 0.96,
+            "aspect": 3.112,
+            "angle": -89.6049,
+            "extent": 0.6562,
+            "area_frac": 0.0012,
+            "is_label": true,
+            "value_mean": 150.4864,
+            "saturation_mean": 70.4444,
+            "ring_background": 0.89,
+            "text_blobs": 18,
+            "text_row_blobs": 6,
+            "pair_cost": 134.6,
+            "text": "",
+            "ocr_confidence": 0.0
+          }
+        }
+      ],
+      "files": {
+        "labels": [
+          "label_01.png"
+        ],
+        "mineral": "mineral.png",
+        "mineral_mask": "mineral_mask.png",
+        "mineral_crop": "mineral_crop.jpg",
+        "transcription": "transcription.txt",
+        "pair": "pair.jpg"
+      }
+    },
+    {
+      "id": "segment_04",
+      "kind": "specimen_only",
+      "bbox": [
+        136,
+        502,
+        475,
+        806
+      ],
+      "transcription": "",
+      "specimen": {
+        "kind": "specimen",
+        "bbox": [
+          136,
+          502,
+          475,
+          806
+        ],
+        "centroid": [
+          297.1,
+          671.6
+        ],
+        "area_px": 51670,
+        "score": 0.9899,
+        "stats": {
+          "area_frac": 0.007,
+          "n_source_masks": 3,
+          "refine_iou": 0.951,
+          "refine_growth": 0.954,
+          "refined": true
+        }
+      },
+      "labels": [],
+      "files": {
+        "labels": [],
+        "mineral": "mineral.png",
+        "mineral_mask": "mineral_mask.png",
+        "mineral_crop": "mineral_crop.jpg",
+        "pair": "pair.jpg"
+      }
+    },
+    {
+      "id": "segment_05",
+      "kind": "specimen_only",
+      "bbox": [
+        143,
+        159,
+        599,
+        467
+      ],
+      "transcription": "",
+      "specimen": {
+        "kind": "specimen",
+        "bbox": [
+          143,
+          159,
+          599,
+          467
+        ],
+        "centroid": [
+          400.1,
+          324.3
+        ],
+        "area_px": 85380,
+        "score": 0.9683,
+        "stats": {
+          "area_frac": 0.0115,
+          "n_source_masks": 3,
+          "refine_iou": 0.928,
+          "refine_growth": 0.939,
+          "refined": true
+        }
+      },
+      "labels": [],
+      "files": {
+        "labels": [],
+        "mineral": "mineral.png",
+        "mineral_mask": "mineral_mask.png",
+        "mineral_crop": "mineral_crop.jpg",
+        "pair": "pair.jpg"
+      }
+    },
+    {
+      "id": "segment_06",
+      "kind": "specimen_only",
+      "bbox": [
+        260,
+        1434,
+        456,
+        1594
+      ],
+      "transcription": "",
+      "specimen": {
+        "kind": "specimen",
+        "bbox": [
+          260,
+          1434,
+          456,
+          1594
+        ],
+        "centroid": [
+          356.1,
+          1511.6
+        ],
+        "area_px": 24012,
+        "score": 0.9894,
+        "stats": {
+          "area_frac": 0.0032,
+          "n_source_masks": 1,
+          "refine_iou": 0.967,
+          "refine_growth": 0.967,
+          "refined": true
+        }
+      },
+      "labels": [],
+      "files": {
+        "labels": [],
+        "mineral": "mineral.png",
+        "mineral_mask": "mineral_mask.png",
+        "mineral_crop": "mineral_crop.jpg",
+        "pair": "pair.jpg"
+      }
+    },
+    {
+      "id": "segment_07",
+      "kind": "specimen_only",
+      "bbox": [
+        380,
+        0,
+        836,
+        167
+      ],
+      "transcription": "",
+      "specimen": {
+        "kind": "specimen",
+        "bbox": [
+          380,
+          0,
+          836,
+          167
+        ],
+        "centroid": [
+          616.3,
+          68.8
+        ],
+        "area_px": 56485,
+        "score": 0.9744,
+        "stats": {
+          "area_frac": 0.0076,
+          "n_source_masks": 3,
+          "refine_iou": 0.983,
+          "refine_growth": 0.985,
+          "refined": true
+        }
+      },
+      "labels": [],
+      "files": {
+        "labels": [],
+        "mineral": "mineral.png",
+        "mineral_mask": "mineral_mask.png",
+        "mineral_crop": "mineral_crop.jpg",
+        "pair": "pair.jpg"
+      }
+    },
+    {
+      "id": "segment_08",
+      "kind": "specimen_with_label",
+      "bbox": [
+        529,
+        1069,
+        811,
+        1363
+      ],
+      "transcription": "globular ageregaser on malschite\nsnd.dolomice\nFalkenstein,Tyrol",
+      "specimen": {
+        "kind": "specimen",
+        "bbox": [
+          584,
+          1069,
+          811,
+          1243
+        ],
+        "centroid": [
+          703.9,
+          1160.3
+        ],
+        "area_px": 28495,
+        "score": 0.9318,
+        "stats": {
+          "area_frac": 0.0038,
+          "n_source_masks": 2,
+          "refine_iou": 0.923,
+          "refine_growth": 0.941,
+          "refined": true
+        }
+      },
+      "labels": [
+        {
+          "kind": "label",
+          "bbox": [
+            529,
+            1295,
+            766,
+            1363
+          ],
+          "centroid": [
+            646.8,
+            1329.0
+          ],
+          "area_px": 14225,
+          "score": 1.0,
+          "stats": {
+            "rect_fill": 0.9163,
+            "solidity": 0.9951,
+            "aspect": 3.6042,
+            "angle": -0.5937,
+            "extent": 0.8827,
+            "area_frac": 0.0019,
+            "is_label": true,
+            "value_mean": 175.4229,
+            "saturation_mean": 75.189,
+            "ring_background": 1.0,
+            "text_blobs": 27,
+            "text_row_blobs": 9,
+            "pair_cost": 174.1,
+            "text": "globular ageregaser on malschite\nsnd.dolomice\nFalkenstein,Tyrol",
+            "ocr_confidence": 0.782
+          }
+        }
+      ],
+      "files": {
+        "labels": [
+          "label_01.png"
+        ],
+        "mineral": "mineral.png",
+        "mineral_mask": "mineral_mask.png",
+        "mineral_crop": "mineral_crop.jpg",
+        "transcription": "transcription.txt",
+        "pair": "pair.jpg"
+      }
+    },
+    {
+      "id": "segment_09",
+      "kind": "specimen_with_label",
+      "bbox": [
+        535,
+        673,
+        870,
+        981
+      ],
+      "transcription": "dfrhobswtmubchite",
+      "specimen": {
+        "kind": "specimen",
+        "bbox": [
+          535,
+          673,
+          836,
+          900
+        ],
+        "centroid": [
+          685.0,
+          794.3
+        ],
+        "area_px": 53890,
+        "score": 0.9838,
+        "stats": {
+          "area_frac": 0.0072,
+          "n_source_masks": 1,
+          "refine_iou": 0.979,
+          "refine_growth": 1.0,
+          "refined": true
+        }
+      },
+      "labels": [
+        {
+          "kind": "label",
+          "bbox": [
+            671,
+            925,
+            870,
+            981
+          ],
+          "centroid": [
+            768.6,
+            955.4
+          ],
+          "area_px": 8866,
+          "score": 1.0,
+          "stats": {
+            "rect_fill": 0.8186,
+            "solidity": 0.934,
+            "aspect": 3.5694,
+            "angle": -88.9391,
+            "extent": 0.7956,
+            "area_frac": 0.0012,
+            "is_label": true,
+            "value_mean": 174.6726,
+            "saturation_mean": 63.4371,
+            "ring_background": 1.0,
+            "text_blobs": 31,
+            "text_row_blobs": 11,
+            "pair_cost": 143.5,
+            "text": "dfrhobswtmubchite",
+            "ocr_confidence": 0.583
+          }
+        }
+      ],
+      "files": {
+        "labels": [
+          "label_01.png"
+        ],
+        "mineral": "mineral.png",
+        "mineral_mask": "mineral_mask.png",
+        "mineral_crop": "mineral_crop.jpg",
+        "transcription": "transcription.txt",
+        "pair": "pair.jpg"
+      }
+    },
+    {
+      "id": "segment_10",
+      "kind": "specimen_with_label",
+      "bbox": [
+        732,
+        245,
+        1171,
+        660
+      ],
+      "transcription": "",
+      "specimen": {
+        "kind": "specimen",
+        "bbox": [
+          732,
+          245,
+          1171,
+          577
+        ],
+        "centroid": [
+          962.7,
+          426.1
+        ],
+        "area_px": 95363,
+        "score": 0.9873,
+        "stats": {
+          "area_frac": 0.0129,
+          "n_source_masks": 3,
+          "refine_iou": 0.983,
+          "refine_growth": 0.986,
+          "refined": true
+        }
+      },
+      "labels": [
+        {
+          "kind": "label",
+          "bbox": [
+            958,
+            608,
+            1129,
+            660
+          ],
+          "centroid": [
+            1044.2,
+            633.6
+          ],
+          "area_px": 7745,
+          "score": 1.0,
+          "stats": {
+            "rect_fill": 0.9073,
+            "solidity": 0.9933,
+            "aspect": 3.3775,
+            "angle": -89.4154,
+            "extent": 0.871,
+            "area_frac": 0.001,
+            "is_label": true,
+            "value_mean": 183.4544,
+            "saturation_mean": 61.6034,
+            "ring_background": 1.0,
+            "text_blobs": 23,
+            "text_row_blobs": 6,
+            "pair_cost": 144.8,
+            "text": "",
+            "ocr_confidence": 0.0
+          }
+        }
+      ],
+      "files": {
+        "labels": [
+          "label_01.png"
+        ],
+        "mineral": "mineral.png",
+        "mineral_mask": "mineral_mask.png",
+        "mineral_crop": "mineral_crop.jpg",
+        "transcription": "transcription.txt",
+        "pair": "pair.jpg"
+      }
+    },
+    {
+      "id": "segment_11",
+      "kind": "specimen_with_label",
+      "bbox": [
+        851,
+        1247,
+        1215,
+        1676
+      ],
+      "transcription": "blueearthywithmalachite\nSaalfeld,Thuringis",
+      "specimen": {
+        "kind": "specimen",
+        "bbox": [
+          851,
+          1247,
+          1215,
+          1551
+        ],
+        "centroid": [
+          1015.0,
+          1406.2
+        ],
+        "area_px": 67573,
+        "score": 0.9807,
+        "stats": {
+          "area_frac": 0.009,
+          "n_source_masks": 2,
+          "refine_iou": 0.974,
+          "refine_growth": 1.002,
+          "refined": true
+        }
+      },
+      "labels": [
+        {
+          "kind": "label",
+          "bbox": [
+            911,
+            1555,
+            1111,
+            1676
+          ],
+          "centroid": [
+            1008.3,
+            1617.9
+          ],
+          "area_px": 16667,
+          "score": 1.0,
+          "stats": {
+            "rect_fill": 0.9226,
+            "solidity": 1.0318,
+            "aspect": 2.1645,
+            "angle": -87.9174,
+            "extent": 0.6887,
+            "area_frac": 0.0023,
+            "is_label": true,
+            "value_mean": 172.9395,
+            "saturation_mean": 62.899,
+            "ring_background": 0.926,
+            "text_blobs": 53,
+            "text_row_blobs": 14,
+            "pair_cost": 155.0,
+            "text": "blueearthywithmalachite\nSaalfeld,Thuringis",
+            "ocr_confidence": 0.865
+          }
+        }
+      ],
+      "files": {
+        "labels": [
+          "label_01.png"
+        ],
+        "mineral": "mineral.png",
+        "mineral_mask": "mineral_mask.png",
+        "mineral_crop": "mineral_crop.jpg",
+        "transcription": "transcription.txt",
+        "pair": "pair.jpg"
+      }
+    },
+    {
+      "id": "segment_12",
+      "kind": "specimen_only",
+      "bbox": [
+        880,
+        0,
+        1261,
+        198
+      ],
+      "transcription": "",
+      "specimen": {
+        "kind": "specimen",
+        "bbox": [
+          880,
+          0,
+          1261,
+          198
+        ],
+        "centroid": [
+          1071.5,
+          90.8
+        ],
+        "area_px": 56610,
+        "score": 0.9621,
+        "stats": {
+          "area_frac": 0.0076,
+          "n_source_masks": 2,
+          "refine_iou": 0.985,
+          "refine_growth": 0.993,
+          "refined": true
+        }
+      },
+      "labels": [],
+      "files": {
+        "labels": [],
+        "mineral": "mineral.png",
+        "mineral_mask": "mineral_mask.png",
+        "mineral_crop": "mineral_crop.jpg",
+        "pair": "pair.jpg"
+      }
+    },
+    {
+      "id": "segment_13",
+      "kind": "specimen_with_label",
+      "bbox": [
+        995,
+        761,
+        1340,
+        1105
+      ],
+      "transcription": "compasiterhombs onmalachite\nChessya Francn",
+      "specimen": {
+        "kind": "specimen",
+        "bbox": [
+          995,
+          761,
+          1340,
+          1026
+        ],
+        "centroid": [
+          1165.6,
+          889.3
+        ],
+        "area_px": 69318,
+        "score": 0.9962,
+        "stats": {
+          "area_frac": 0.0093,
+          "n_source_masks": 1,
+          "refine_iou": 0.983,
+          "refine_growth": 0.998,
+          "refined": true
+        }
+      },
+      "labels": [
+        {
+          "kind": "label",
+          "bbox": [
+            1082,
+            1059,
+            1277,
+            1105
+          ],
+          "centroid": [
+            1180.1,
+            1081.5
+          ],
+          "area_px": 7716,
+          "score": 1.0,
+          "stats": {
+            "rect_fill": 0.9292,
+            "solidity": 0.9891,
+            "aspect": 4.5138,
+            "angle": -88.8542,
+            "extent": 0.8602,
+            "area_frac": 0.001,
+            "is_label": true,
+            "value_mean": 176.9832,
+            "saturation_mean": 65.8029,
+            "ring_background": 1.0,
+            "text_blobs": 24,
+            "text_row_blobs": 12,
+            "pair_cost": 143.7,
+            "text": "compasiterhombs onmalachite\nChessya Francn",
+            "ocr_confidence": 0.717
+          }
+        }
+      ],
+      "files": {
+        "labels": [
+          "label_01.png"
+        ],
+        "mineral": "mineral.png",
+        "mineral_mask": "mineral_mask.png",
+        "mineral_crop": "mineral_crop.jpg",
+        "transcription": "transcription.txt",
+        "pair": "pair.jpg"
+      }
+    },
+    {
+      "id": "segment_14",
+      "kind": "specimen_with_label",
+      "bbox": [
+        1245,
+        344,
+        1578,
+        692
+      ],
+      "transcription": "michseite",
+      "specimen": {
+        "kind": "specimen",
+        "bbox": [
+          1245,
+          344,
+          1578,
+          634
+        ],
+        "centroid": [
+          1421.9,
+          491.8
+        ],
+        "area_px": 72836,
+        "score": 0.9903,
+        "stats": {
+          "area_frac": 0.0098,
+          "n_source_masks": 1,
+          "refine_iou": 0.978,
+          "refine_growth": 0.991,
+          "refined": true
+        }
+      },
+      "labels": [
+        {
+          "kind": "label",
+          "bbox": [
+            1353,
+            649,
+            1550,
+            692
+          ],
+          "centroid": [
+            1450.6,
+            670.5
+          ],
+          "area_px": 7466,
+          "score": 1.0,
+          "stats": {
+            "rect_fill": 0.9155,
+            "solidity": 0.9871,
+            "aspect": 4.7113,
+            "angle": -89.3179,
+            "extent": 0.8814,
+            "area_frac": 0.001,
+            "is_label": true,
+            "value_mean": 177.7365,
+            "saturation_mean": 87.299,
+            "ring_background": 1.0,
+            "text_blobs": 21,
+            "text_row_blobs": 6,
+            "pair_cost": 124.6,
+            "text": "michseite",
+            "ocr_confidence": 0.586
+          }
+        }
+      ],
+      "files": {
+        "labels": [
+          "label_01.png"
+        ],
+        "mineral": "mineral.png",
+        "mineral_mask": "mineral_mask.png",
+        "mineral_crop": "mineral_crop.jpg",
+        "transcription": "transcription.txt",
+        "pair": "pair.jpg"
+      }
+    },
+    {
+      "id": "segment_15",
+      "kind": "specimen_with_label",
+      "bbox": [
+        1265,
+        1545,
+        1581,
+        1743
+      ],
+      "transcription": "slender prisms on matrix\nToulssit Morocco",
+      "specimen": {
+        "kind": "specimen",
+        "bbox": [
+          1265,
+          1545,
+          1581,
+          1670
+        ],
+        "centroid": [
+          1419.0,
+          1599.6
+        ],
+        "area_px": 26903,
+        "score": 0.9692,
+        "stats": {
+          "area_frac": 0.0035,
+          "n_source_masks": 1,
+          "refine_iou": 0.939,
+          "refine_growth": 1.019,
+          "refined": true
+        }
+      },
+      "labels": [
+        {
+          "kind": "label",
+          "bbox": [
+            1316,
+            1667,
+            1521,
+            1743
+          ],
+          "centroid": [
+            1419.5,
+            1708.9
+          ],
+          "area_px": 12559,
+          "score": 1.0,
+          "stats": {
+            "rect_fill": 0.8274,
+            "solidity": 0.9623,
+            "aspect": 2.7635,
+            "angle": -1.3804,
+            "extent": 0.8061,
+            "area_frac": 0.0017,
+            "is_label": true,
+            "value_mean": 130.1112,
+            "saturation_mean": 54.855,
+            "ring_background": 0.992,
+            "text_blobs": 52,
+            "text_row_blobs": 15,
+            "pair_cost": 127.0,
+            "text": "slender prisms on matrix\nToulssit Morocco",
+            "ocr_confidence": 0.798
+          }
+        }
+      ],
+      "files": {
+        "labels": [
+          "label_01.png"
+        ],
+        "mineral": "mineral.png",
+        "mineral_mask": "mineral_mask.png",
+        "mineral_crop": "mineral_crop.jpg",
+        "transcription": "transcription.txt",
+        "pair": "pair.jpg"
+      }
+    },
+    {
+      "id": "segment_16",
+      "kind": "specimen_only",
+      "bbox": [
+        1295,
+        0,
+        1620,
+        247
+      ],
+      "transcription": "",
+      "specimen": {
+        "kind": "specimen",
+        "bbox": [
+          1295,
+          0,
+          1620,
+          247
+        ],
+        "centroid": [
+          1471.1,
+          101.5
+        ],
+        "area_px": 51387,
+        "score": 0.9515,
+        "stats": {
+          "area_frac": 0.0066,
+          "n_source_masks": 4,
+          "refine_iou": 0.904,
+          "refine_growth": 1.0,
+          "refined": true
+        }
+      },
+      "labels": [],
+      "files": {
+        "labels": [],
+        "mineral": "mineral.png",
+        "mineral_mask": "mineral_mask.png",
+        "mineral_crop": "mineral_crop.jpg",
+        "pair": "pair.jpg"
+      }
+    },
+    {
+      "id": "segment_17",
+      "kind": "specimen_with_label",
+      "bbox": [
+        1366,
+        996,
+        1642,
+        1273
+      ],
+      "transcription": "compos/teplaty crystalswith\nChessy.France",
+      "specimen": {
+        "kind": "specimen",
+        "bbox": [
+          1366,
+          996,
+          1642,
+          1183
+        ],
+        "centroid": [
+          1511.3,
+          1092.4
+        ],
+        "area_px": 41407,
+        "score": 0.9862,
+        "stats": {
+          "area_frac": 0.0056,
+          "n_source_masks": 3,
+          "refine_iou": 0.924,
+          "refine_growth": 0.94,
+          "refined": true
+        }
+      },
+      "labels": [
+        {
+          "kind": "label",
+          "bbox": [
+            1425,
+            1194,
+            1642,
+            1273
+          ],
+          "centroid": [
+            1535.2,
+            1245.5
+          ],
+          "area_px": 10659,
+          "score": 1.0,
+          "stats": {
+            "rect_fill": 1.0131,
+            "solidity": 1.0553,
+            "aspect": 4.4301,
+            "angle": -89.2462,
+            "extent": 0.6218,
+            "area_frac": 0.0014,
+            "is_label": true,
+            "value_mean": 183.3359,
+            "saturation_mean": 64.7875,
+            "ring_background": 1.0,
+            "text_blobs": 31,
+            "text_row_blobs": 8,
+            "pair_cost": 150.6,
+            "text": "compos/teplaty crystalswith\nChessy.France",
+            "ocr_confidence": 0.85
+          }
+        }
+      ],
+      "files": {
+        "labels": [
+          "label_01.png"
+        ],
+        "mineral": "mineral.png",
+        "mineral_mask": "mineral_mask.png",
+        "mineral_crop": "mineral_crop.jpg",
+        "transcription": "transcription.txt",
+        "pair": "pair.jpg"
+      }
+    },
+    {
+      "id": "segment_18",
+      "kind": "specimen_with_label",
+      "bbox": [
+        1535,
+        644,
+        1825,
+        924
+      ],
+      "transcription": "bessy,France",
+      "specimen": {
+        "kind": "specimen",
+        "bbox": [
+          1535,
+          644,
+          1825,
+          856
+        ],
+        "centroid": [
+          1687.4,
+          748.9
+        ],
+        "area_px": 44317,
+        "score": 0.9941,
+        "stats": {
+          "area_frac": 0.006,
+          "n_source_masks": 2,
+          "refine_iou": 0.969,
+          "refine_growth": 0.977,
+          "refined": true
+        }
+      },
+      "labels": [
+        {
+          "kind": "label",
+          "bbox": [
+            1608,
+            884,
+            1784,
+            924
+          ],
+          "centroid": [
+            1695.0,
+            904.0
+          ],
+          "area_px": 6346,
+          "score": 1.0,
+          "stats": {
+            "rect_fill": 0.9452,
+            "solidity": 0.9799,
+            "aspect": 4.5774,
+            "angle": -89.231,
+            "extent": 0.9014,
+            "area_frac": 0.0009,
+            "is_label": true,
+            "value_mean": 189.4779,
+            "saturation_mean": 66.4475,
+            "ring_background": 1.0,
+            "text_blobs": 15,
+            "text_row_blobs": 7,
+            "pair_cost": 136.1,
+            "text": "bessy,France",
+            "ocr_confidence": 0.638
+          }
+        }
+      ],
+      "files": {
+        "labels": [
+          "label_01.png"
+        ],
+        "mineral": "mineral.png",
+        "mineral_mask": "mineral_mask.png",
+        "mineral_crop": "mineral_crop.jpg",
+        "transcription": "transcription.txt",
+        "pair": "pair.jpg"
+      }
+    },
+    {
+      "id": "segment_19",
+      "kind": "specimen_with_label",
+      "bbox": [
+        1710,
+        1231,
+        1886,
+        1502
+      ],
+      "transcription": "ChessyeFrance group of tabofar crystal",
+      "specimen": {
+        "kind": "specimen",
+        "bbox": [
+          1716,
+          1231,
+          1849,
+          1372
+        ],
+        "centroid": [
+          1785.9,
+          1299.1
+        ],
+        "area_px": 13715,
+        "score": 0.9527,
+        "stats": {
+          "area_frac": 0.0018,
+          "n_source_masks": 1,
+          "refine_iou": 0.773,
+          "refine_growth": 0.785,
+          "refined": true
+        }
+      },
+      "labels": [
+        {
+          "kind": "label",
+          "bbox": [
+            1710,
+            1395,
+            1886,
+            1502
+          ],
+          "centroid": [
+            1798.7,
+            1443.0
+          ],
+          "area_px": 15699,
+          "score": 1.0,
+          "stats": {
+            "rect_fill": 0.8463,
+            "solidity": 0.9183,
+            "aspect": 1.6509,
+            "angle": -90.0,
+            "extent": 0.8336,
+            "area_frac": 0.0021,
+            "is_label": true,
+            "value_mean": 189.6858,
+            "saturation_mean": 54.6858,
+            "ring_background": 0.997,
+            "text_blobs": 14,
+            "text_row_blobs": 6,
+            "pair_cost": 159.1,
+            "text": "ChessyeFrance group of tabofar crystal",
+            "ocr_confidence": 0.784
+          }
+        }
+      ],
+      "files": {
+        "labels": [
+          "label_01.png"
+        ],
+        "mineral": "mineral.png",
+        "mineral_mask": "mineral_mask.png",
+        "mineral_crop": "mineral_crop.jpg",
+        "transcription": "transcription.txt",
+        "pair": "pair.jpg"
+      }
+    },
+    {
+      "id": "segment_20",
+      "kind": "specimen_with_label",
+      "bbox": [
+        1744,
+        0,
+        2274,
+        637
+      ],
+      "transcription": "Pra nouLRomania",
+      "specimen": {
+        "kind": "specimen",
+        "bbox": [
+          1744,
+          0,
+          2274,
+          573
+        ],
+        "centroid": [
+          2007.8,
+          304.4
+        ],
+        "area_px": 196336,
+        "score": 0.9854,
+        "stats": {
+          "area_frac": 0.0265,
+          "n_source_masks": 10,
+          "refine_iou": 0.648,
+          "refine_growth": 0.655,
+          "refined": true
+        }
+      },
+      "labels": [
+        {
+          "kind": "label",
+          "bbox": [
+            1907,
+            597,
+            2046,
+            637
+          ],
+          "centroid": [
+            1973.8,
+            616.4
+          ],
+          "area_px": 4893,
+          "score": 1.0,
+          "stats": {
+            "rect_fill": 0.9239,
+            "solidity": 0.9996,
+            "aspect": 3.5988,
+            "angle": -89.2258,
+            "extent": 0.88,
+            "area_frac": 0.0007,
+            "is_label": true,
+            "value_mean": 185.2775,
+            "saturation_mean": 66.2737,
+            "ring_background": 0.989,
+            "text_blobs": 19,
+            "text_row_blobs": 8,
+            "pair_cost": 131.5,
+            "text": "Pra nouLRomania",
+            "ocr_confidence": 0.645
+          }
+        }
+      ],
+      "files": {
+        "labels": [
+          "label_01.png"
+        ],
+        "mineral": "mineral.png",
+        "mineral_mask": "mineral_mask.png",
+        "mineral_crop": "mineral_crop.jpg",
+        "transcription": "transcription.txt",
+        "pair": "pair.jpg"
+      }
+    },
+    {
+      "id": "segment_21",
+      "kind": "specimen_only",
+      "bbox": [
+        1831,
+        1696,
+        2082,
+        1848
+      ],
+      "transcription": "",
+      "specimen": {
+        "kind": "specimen",
+        "bbox": [
+          1831,
+          1696,
+          2082,
+          1848
+        ],
+        "centroid": [
+          1960.3,
+          1783.2
+        ],
+        "area_px": 31164,
+        "score": 0.9631,
+        "stats": {
+          "area_frac": 0.0041,
+          "n_source_masks": 1,
+          "refine_iou": 0.91,
+          "refine_growth": 0.965,
+          "refined": true
+        }
+      },
+      "labels": [],
+      "files": {
+        "labels": [],
+        "mineral": "mineral.png",
+        "mineral_mask": "mineral_mask.png",
+        "mineral_crop": "mineral_crop.jpg",
+        "pair": "pair.jpg"
+      }
+    },
+    {
+      "id": "segment_22",
+      "kind": "specimen_with_label",
+      "bbox": [
+        1851,
+        781,
+        2178,
+        1161
+      ],
+      "transcription": "Azurite\nCU,(CO,),(OH)2\nMonoclinic\n\ngroup of cryutah sltering\ntomalachite\nChessy,France",
+      "specimen": {
+        "kind": "specimen",
+        "bbox": [
+          1959,
+          781,
+          2178,
+          895
+        ],
+        "centroid": [
+          2057.9,
+          836.6
+        ],
+        "area_px": 15452,
+        "score": 0.97,
+        "stats": {
+          "area_frac": 0.002,
+          "n_source_masks": 1,
+          "refine_iou": 0.926,
+          "refine_growth": 1.002,
+          "refined": true
+        }
+      },
+      "labels": [
+        {
+          "kind": "label",
+          "bbox": [
+            1851,
+            1053,
+            2011,
+            1161
+          ],
+          "centroid": [
+            1931.1,
+            1107.1
+          ],
+          "area_px": 16893,
+          "score": 0.9846,
+          "stats": {
+            "rect_fill": 0.9929,
+            "solidity": 1.0062,
+            "aspect": 1.486,
+            "angle": -90.0,
+            "extent": 0.9776,
+            "area_frac": 0.0023,
+            "is_label": true,
+            "value_mean": 227.433,
+            "saturation_mean": 16.4765,
+            "ring_background": 0.941,
+            "text_blobs": 32,
+            "text_row_blobs": 14,
+            "pair_cost": 302.1,
+            "text": "Azurite\nCU,(CO,),(OH)2\nMonoclinic",
+            "ocr_confidence": 0.828
+          }
+        },
+        {
+          "kind": "label",
+          "bbox": [
+            1990,
+            923,
+            2129,
+            974
+          ],
+          "centroid": [
+            2058.5,
+            948.4
+          ],
+          "area_px": 6809,
+          "score": 0.9675,
+          "stats": {
+            "rect_fill": 0.9868,
+            "solidity": 1.009,
+            "aspect": 2.76,
+            "angle": -90.0,
+            "extent": 0.9605,
+            "area_frac": 0.0009,
+            "is_label": true,
+            "value_mean": 190.8791,
+            "saturation_mean": 61.0913,
+            "ring_background": 0.883,
+            "text_blobs": 21,
+            "text_row_blobs": 7,
+            "pair_cost": 141.6,
+            "text": "group of cryutah sltering\ntomalachite\nChessy,France",
+            "ocr_confidence": 0.822
+          }
+        }
+      ],
+      "files": {
+        "labels": [
+          "label_01.png",
+          "label_02.png"
+        ],
+        "mineral": "mineral.png",
+        "mineral_mask": "mineral_mask.png",
+        "mineral_crop": "mineral_crop.jpg",
+        "transcription": "transcription.txt",
+        "pair": "pair.jpg"
+      }
+    },
+    {
+      "id": "segment_23",
+      "kind": "specimen_with_label",
+      "bbox": [
+        2186,
+        1145,
+        2511,
+        1684
+      ],
+      "transcription": "Pmaleryl Tumahmna Oihikota Nantis\n\nGroupddprismatkcryatals\nTrumebmine,Oshikota Nambla",
+      "specimen": {
+        "kind": "specimen",
+        "bbox": [
+          2238,
+          1145,
+          2373,
+          1304
+        ],
+        "centroid": [
+          2298.8,
+          1220.7
+        ],
+        "area_px": 12964,
+        "score": 0.9375,
+        "stats": {
+          "area_frac": 0.0018,
+          "n_source_masks": 2,
+          "refine_iou": 0.932,
+          "refine_growth": 0.941,
+          "refined": true
+        }
+      },
+      "labels": [
+        {
+          "kind": "label",
+          "bbox": [
+            2281,
+            1607,
+            2511,
+            1684
+          ],
+          "centroid": [
+            2393.8,
+            1645.6
+          ],
+          "area_px": 16437,
+          "score": 1.0,
+          "stats": {
+            "rect_fill": 0.9444,
+            "solidity": 0.9873,
+            "aspect": 3.0132,
+            "angle": -90.0,
+            "extent": 0.9281,
+            "area_frac": 0.0022,
+            "is_label": true,
+            "value_mean": 162.4215,
+            "saturation_mean": 39.8957,
+            "ring_background": 0.866,
+            "text_blobs": 30,
+            "text_row_blobs": 13,
+            "pair_cost": 430.3,
+            "text": "Pmaleryl Tumahmna Oihikota Nantis",
+            "ocr_confidence": 0.593
+          }
+        },
+        {
+          "kind": "label",
+          "bbox": [
+            2186,
+            1309,
+            2398,
+            1372
+          ],
+          "centroid": [
+            2292.1,
+            1340.6
+          ],
+          "area_px": 12652,
+          "score": 0.9686,
+          "stats": {
+            "rect_fill": 0.9671,
+            "solidity": 1.0028,
+            "aspect": 3.4032,
+            "angle": -90.0,
+            "extent": 0.9473,
+            "area_frac": 0.0017,
+            "is_label": true,
+            "value_mean": 180.3734,
+            "saturation_mean": 43.0351,
+            "ring_background": 0.944,
+            "text_blobs": 15,
+            "text_row_blobs": 4,
+            "pair_cost": 124.7,
+            "text": "Groupddprismatkcryatals\nTrumebmine,Oshikota Nambla",
+            "ocr_confidence": 0.762
+          }
+        }
+      ],
+      "files": {
+        "labels": [
+          "label_01.png",
+          "label_02.png"
+        ],
+        "mineral": "mineral.png",
+        "mineral_mask": "mineral_mask.png",
+        "mineral_crop": "mineral_crop.jpg",
+        "transcription": "transcription.txt",
+        "pair": "pair.jpg"
+      }
+    },
+    {
+      "id": "segment_24",
+      "kind": "specimen_only",
+      "bbox": [
+        2249,
+        460,
+        2434,
+        735
+      ],
+      "transcription": "",
+      "specimen": {
+        "kind": "specimen",
+        "bbox": [
+          2249,
+          460,
+          2434,
+          735
+        ],
+        "centroid": [
+          2335.2,
+          601.3
+        ],
+        "area_px": 40332,
+        "score": 0.9907,
+        "stats": {
+          "area_frac": 0.0054,
+          "n_source_masks": 3,
+          "refine_iou": 0.97,
+          "refine_growth": 0.982,
+          "refined": true
+        }
+      },
+      "labels": [],
+      "files": {
+        "labels": [],
+        "mineral": "mineral.png",
+        "mineral_mask": "mineral_mask.png",
+        "mineral_crop": "mineral_crop.jpg",
+        "pair": "pair.jpg"
+      }
+    },
+    {
+      "id": "segment_25",
+      "kind": "specimen_with_label",
+      "bbox": [
+        2333,
+        852,
+        2602,
+        1140
+      ],
+      "transcription": "Dark-blue prismaciccrycalwith\nmalachiteandcerussita\nTumebmine,Oshkoto,Namibia",
+      "specimen": {
+        "kind": "specimen",
+        "bbox": [
+          2333,
+          852,
+          2602,
+          1057
+        ],
+        "centroid": [
+          2460.2,
+          952.8
+        ],
+        "area_px": 39028,
+        "score": 0.9891,
+        "stats": {
+          "area_frac": 0.0053,
+          "n_source_masks": 3,
+          "refine_iou": 0.934,
+          "refine_growth": 0.942,
+          "refined": true
+        }
+      },
+      "labels": [
+        {
+          "kind": "label",
+          "bbox": [
+            2342,
+            1069,
+            2541,
+            1140
+          ],
+          "centroid": [
+            2439.7,
+            1103.8
+          ],
+          "area_px": 12437,
+          "score": 0.9634,
+          "stats": {
+            "rect_fill": 0.9192,
+            "solidity": 0.9836,
+            "aspect": 2.9304,
+            "angle": -88.9292,
+            "extent": 0.8802,
+            "area_frac": 0.0017,
+            "is_label": true,
+            "value_mean": 167.6823,
+            "saturation_mean": 45.2746,
+            "ring_background": 0.987,
+            "text_blobs": 27,
+            "text_row_blobs": 8,
+            "pair_cost": 134.9,
+            "text": "Dark-blue prismaciccrycalwith\nmalachiteandcerussita\nTumebmine,Oshkoto,Namibia",
+            "ocr_confidence": 0.787
+          }
+        }
+      ],
+      "files": {
+        "labels": [
+          "label_01.png"
+        ],
+        "mineral": "mineral.png",
+        "mineral_mask": "mineral_mask.png",
+        "mineral_crop": "mineral_crop.jpg",
+        "transcription": "transcription.txt",
+        "pair": "pair.jpg"
+      }
+    },
+    {
+      "id": "segment_26",
+      "kind": "specimen_only",
+      "bbox": [
+        2339,
+        0,
+        2808,
+        214
+      ],
+      "transcription": "",
+      "specimen": {
+        "kind": "specimen",
+        "bbox": [
+          2339,
+          0,
+          2808,
+          214
+        ],
+        "centroid": [
+          2591.2,
+          87.2
+        ],
+        "area_px": 59830,
+        "score": 0.9763,
+        "stats": {
+          "area_frac": 0.008,
+          "n_source_masks": 4,
+          "refine_iou": 0.882,
+          "refine_growth": 0.892,
+          "refined": true
+        }
+      },
+      "labels": [],
+      "files": {
+        "labels": [],
+        "mineral": "mineral.png",
+        "mineral_mask": "mineral_mask.png",
+        "mineral_crop": "mineral_crop.jpg",
+        "pair": "pair.jpg"
+      }
+    },
+    {
+      "id": "segment_27",
+      "kind": "specimen_with_label",
+      "bbox": [
+        2495,
+        369,
+        2717,
+        639
+      ],
+      "transcription": "",
+      "specimen": {
+        "kind": "specimen",
+        "bbox": [
+          2495,
+          369,
+          2717,
+          587
+        ],
+        "centroid": [
+          2602.3,
+          482.0
+        ],
+        "area_px": 33504,
+        "score": 0.9807,
+        "stats": {
+          "area_frac": 0.0045,
+          "n_source_masks": 2,
+          "refine_iou": 0.847,
+          "refine_growth": 0.871,
+          "refined": true
+        }
+      },
+      "labels": [
+        {
+          "kind": "label",
+          "bbox": [
+            2530,
+            587,
+            2646,
+            639
+          ],
+          "centroid": [
+            2591.0,
+            612.0
+          ],
+          "area_px": 5126,
+          "score": 1.0,
+          "stats": {
+            "rect_fill": 0.878,
+            "solidity": 0.9845,
+            "aspect": 2.2326,
+            "angle": -1.9092,
+            "extent": 0.8498,
+            "area_frac": 0.0007,
+            "is_label": true,
+            "value_mean": 186.4142,
+            "saturation_mean": 48.9173,
+            "ring_background": 0.658,
+            "text_blobs": 8,
+            "text_row_blobs": 5,
+            "pair_cost": 113.1,
+            "text": "",
+            "ocr_confidence": 0.0
+          }
+        }
+      ],
+      "files": {
+        "labels": [
+          "label_01.png"
+        ],
+        "mineral": "mineral.png",
+        "mineral_mask": "mineral_mask.png",
+        "mineral_crop": "mineral_crop.jpg",
+        "transcription": "transcription.txt",
+        "pair": "pair.jpg"
+      }
+    },
+    {
+      "id": "segment_28",
+      "kind": "specimen_with_label",
+      "bbox": [
+        2534,
+        1321,
+        2777,
+        1546
+      ],
+      "transcription": "Thunsain Okoa Ne Doudly terginu wriaedne",
+      "specimen": {
+        "kind": "specimen",
+        "bbox": [
+          2534,
+          1321,
+          2770,
+          1466
+        ],
+        "centroid": [
+          2643.9,
+          1395.6
+        ],
+        "area_px": 18962,
+        "score": 0.9866,
+        "stats": {
+          "area_frac": 0.0026,
+          "n_source_masks": 1,
+          "refine_iou": 0.959,
+          "refine_growth": 0.964,
+          "refined": true
+        }
+      },
+      "labels": [
+        {
+          "kind": "label",
+          "bbox": [
+            2551,
+            1475,
+            2777,
+            1546
+          ],
+          "centroid": [
+            2662.7,
+            1509.5
+          ],
+          "area_px": 14241,
+          "score": 0.9682,
+          "stats": {
+            "rect_fill": 0.9042,
+            "solidity": 0.9654,
+            "aspect": 3.2143,
+            "angle": -90.0,
+            "extent": 0.8875,
+            "area_frac": 0.0019,
+            "is_label": true,
+            "value_mean": 179.2311,
+            "saturation_mean": 39.6311,
+            "ring_background": 0.94,
+            "text_blobs": 17,
+            "text_row_blobs": 6,
+            "pair_cost": 131.6,
+            "text": "Thunsain Okoa Ne Doudly terginu wriaedne",
+            "ocr_confidence": 0.565
+          }
+        }
+      ],
+      "files": {
+        "labels": [
+          "label_01.png"
+        ],
+        "mineral": "mineral.png",
+        "mineral_mask": "mineral_mask.png",
+        "mineral_crop": "mineral_crop.jpg",
+        "transcription": "transcription.txt",
+        "pair": "pair.jpg"
+      }
+    },
+    {
+      "id": "segment_29",
+      "kind": "specimen_only",
+      "bbox": [
+        2631,
+        1092,
+        2822,
+        1302
+      ],
+      "transcription": "",
+      "specimen": {
+        "kind": "specimen",
+        "bbox": [
+          2631,
+          1092,
+          2822,
+          1302
+        ],
+        "centroid": [
+          2721.5,
+          1215.0
+        ],
+        "area_px": 22333,
+        "score": 0.9733,
+        "stats": {
+          "area_frac": 0.003,
+          "n_source_masks": 2,
+          "refine_iou": 0.646,
+          "refine_growth": 0.665,
+          "refined": true
+        }
+      },
+      "labels": [],
+      "files": {
+        "labels": [],
+        "mineral": "mineral.png",
+        "mineral_mask": "mineral_mask.png",
+        "mineral_crop": "mineral_crop.jpg",
+        "pair": "pair.jpg"
+      }
+    },
+    {
+      "id": "segment_30",
+      "kind": "specimen_with_label",
+      "bbox": [
+        2656,
+        767,
+        3045,
+        1040
+      ],
+      "transcription": "",
+      "specimen": {
+        "kind": "specimen",
+        "bbox": [
+          2656,
+          767,
+          3045,
+          967
+        ],
+        "centroid": [
+          2849.4,
+          870.5
+        ],
+        "area_px": 51888,
+        "score": 0.9844,
+        "stats": {
+          "area_frac": 0.0069,
+          "n_source_masks": 2,
+          "refine_iou": 0.973,
+          "refine_growth": 0.993,
+          "refined": true
+        }
+      },
+      "labels": [
+        {
+          "kind": "label",
+          "bbox": [
+            2713,
+            968,
+            2934,
+            1040
+          ],
+          "centroid": [
+            2824.4,
+            1007.3
+          ],
+          "area_px": 12507,
+          "score": 1.0,
+          "stats": {
+            "rect_fill": 0.8007,
+            "solidity": 0.9494,
+            "aspect": 3.0986,
+            "angle": -90.0,
+            "extent": 0.786,
+            "area_frac": 0.0017,
+            "is_label": true,
+            "value_mean": 180.9842,
+            "saturation_mean": 53.6039,
+            "ring_background": 0.93,
+            "text_blobs": 26,
+            "text_row_blobs": 8,
+            "pair_cost": 128.5,
+            "text": "",
+            "ocr_confidence": 0.0
+          }
+        }
+      ],
+      "files": {
+        "labels": [
+          "label_01.png"
+        ],
+        "mineral": "mineral.png",
+        "mineral_mask": "mineral_mask.png",
+        "mineral_crop": "mineral_crop.jpg",
+        "transcription": "transcription.txt",
+        "pair": "pair.jpg"
+      }
+    },
+    {
+      "id": "segment_31",
+      "kind": "specimen_with_label",
+      "bbox": [
+        2825,
+        526,
+        3038,
+        762
+      ],
+      "transcription": "",
+      "specimen": {
+        "kind": "specimen",
+        "bbox": [
+          2825,
+          526,
+          3038,
+          700
+        ],
+        "centroid": [
+          2931.9,
+          616.7
+        ],
+        "area_px": 27855,
+        "score": 0.9558,
+        "stats": {
+          "area_frac": 0.0037,
+          "n_source_masks": 2,
+          "refine_iou": 0.938,
+          "refine_growth": 0.964,
+          "refined": true
+        }
+      },
+      "labels": [
+        {
+          "kind": "label",
+          "bbox": [
+            2841,
+            706,
+            3021,
+            762
+          ],
+          "centroid": [
+            2927.3,
+            730.3
+          ],
+          "area_px": 7528,
+          "score": 1.0,
+          "stats": {
+            "rect_fill": 0.8828,
+            "solidity": 0.9879,
+            "aspect": 3.7802,
+            "angle": -88.768,
+            "extent": 0.7468,
+            "area_frac": 0.001,
+            "is_label": true,
+            "value_mean": 190.3421,
+            "saturation_mean": 67.1534,
+            "ring_background": 0.74,
+            "text_blobs": 22,
+            "text_row_blobs": 7,
+            "pair_cost": 118.4,
+            "text": "",
+            "ocr_confidence": 0.0
+          }
+        }
+      ],
+      "files": {
+        "labels": [
+          "label_01.png"
+        ],
+        "mineral": "mineral.png",
+        "mineral_mask": "mineral_mask.png",
+        "mineral_crop": "mineral_crop.jpg",
+        "transcription": "transcription.txt",
+        "pair": "pair.jpg"
+      }
+    },
+    {
+      "id": "segment_32",
+      "kind": "specimen_with_label",
+      "bbox": [
+        2854,
+        0,
+        4000,
+        680
+      ],
+      "transcription": "",
+      "specimen": {
+        "kind": "specimen",
+        "bbox": [
+          2854,
+          0,
+          4000,
+          680
+        ],
+        "centroid": [
+          3585.2,
+          223.8
+        ],
+        "area_px": 290477,
+        "score": 0.9897,
+        "stats": {
+          "area_frac": 0.0375,
+          "n_source_masks": 10,
+          "refine_iou": 0.524,
+          "refine_growth": 0.601,
+          "refined": true
+        }
+      },
+      "labels": [
+        {
+          "kind": "label",
+          "bbox": [
+            3568,
+            622,
+            3766,
+            665
+          ],
+          "centroid": [
+            3662.2,
+            643.8
+          ],
+          "area_px": 6737,
+          "score": 0.919,
+          "stats": {
+            "rect_fill": 0.8262,
+            "solidity": 0.9762,
+            "aspect": 4.7952,
+            "angle": -88.1524,
+            "extent": 0.7913,
+            "area_frac": 0.0009,
+            "is_label": true,
+            "value_mean": 150.0517,
+            "saturation_mean": 28.4281,
+            "ring_background": 0.85,
+            "text_blobs": 27,
+            "text_row_blobs": 7,
+            "pair_cost": 88.1,
+            "text": "",
+            "ocr_confidence": 0.0
+          }
+        }
+      ],
+      "files": {
+        "labels": [
+          "label_01.png"
+        ],
+        "mineral": "mineral.png",
+        "mineral_mask": "mineral_mask.png",
+        "mineral_crop": "mineral_crop.jpg",
+        "transcription": "transcription.txt",
+        "pair": "pair.jpg"
+      }
+    },
+    {
+      "id": "segment_33",
+      "kind": "specimen_only",
+      "bbox": [
+        2993,
+        314,
+        3422,
+        602
+      ],
+      "transcription": "",
+      "specimen": {
+        "kind": "specimen",
+        "bbox": [
+          2993,
+          314,
+          3422,
+          602
+        ],
+        "centroid": [
+          3224.2,
+          454.9
+        ],
+        "area_px": 86917,
+        "score": 0.9925,
+        "stats": {
+          "area_frac": 0.0118,
+          "n_source_masks": 3,
+          "refine_iou": 0.981,
+          "refine_growth": 0.983,
+          "refined": true
+        }
+      },
+      "labels": [],
+      "files": {
+        "labels": [],
+        "mineral": "mineral.png",
+        "mineral_mask": "mineral_mask.png",
+        "mineral_crop": "mineral_crop.jpg",
+        "pair": "pair.jpg"
+      }
+    },
+    {
+      "id": "segment_34",
+      "kind": "specimen_with_label",
+      "bbox": [
+        3041,
+        1145,
+        3266,
+        1519
+      ],
+      "transcription": "",
+      "specimen": {
+        "kind": "specimen",
+        "bbox": [
+          3062,
+          1145,
+          3210,
+          1437
+        ],
+        "centroid": [
+          3134.6,
+          1301.6
+        ],
+        "area_px": 37462,
+        "score": 0.9894,
+        "stats": {
+          "area_frac": 0.005,
+          "n_source_masks": 1,
+          "refine_iou": 0.966,
+          "refine_growth": 0.975,
+          "refined": true
+        }
+      },
+      "labels": [
+        {
+          "kind": "label",
+          "bbox": [
+            3041,
+            1452,
+            3266,
+            1519
+          ],
+          "centroid": [
+            3154.4,
+            1485.7
+          ],
+          "area_px": 13599,
+          "score": 0.9646,
+          "stats": {
+            "rect_fill": 0.9198,
+            "solidity": 0.9965,
+            "aspect": 3.3939,
+            "angle": -90.0,
+            "extent": 0.9021,
+            "area_frac": 0.0018,
+            "is_label": true,
+            "value_mean": 174.9512,
+            "saturation_mean": 41.2875,
+            "ring_background": 0.967,
+            "text_blobs": 18,
+            "text_row_blobs": 7,
+            "pair_cost": 136.8,
+            "text": "",
+            "ocr_confidence": 0.0
+          }
+        }
+      ],
+      "files": {
+        "labels": [
+          "label_01.png"
+        ],
+        "mineral": "mineral.png",
+        "mineral_mask": "mineral_mask.png",
+        "mineral_crop": "mineral_crop.jpg",
+        "transcription": "transcription.txt",
+        "pair": "pair.jpg"
+      }
+    },
+    {
+      "id": "segment_35",
+      "kind": "specimen_with_label",
+      "bbox": [
+        3165,
+        934,
+        3490,
+        1246
+      ],
+      "transcription": "",
+      "specimen": {
+        "kind": "specimen",
+        "bbox": [
+          3165,
+          934,
+          3490,
+          1178
+        ],
+        "centroid": [
+          3337.9,
+          1056.9
+        ],
+        "area_px": 56243,
+        "score": 0.9913,
+        "stats": {
+          "area_frac": 0.0076,
+          "n_source_masks": 2,
+          "refine_iou": 0.983,
+          "refine_growth": 0.985,
+          "refined": true
+        }
+      },
+      "labels": [
+        {
+          "kind": "label",
+          "bbox": [
+            3196,
+            1187,
+            3465,
+            1246
+          ],
+          "centroid": [
+            3328.8,
+            1215.8
+          ],
+          "area_px": 14063,
+          "score": 0.9579,
+          "stats": {
+            "rect_fill": 0.9047,
+            "solidity": 0.9748,
+            "aspect": 4.6207,
+            "angle": -90.0,
+            "extent": 0.8861,
+            "area_frac": 0.0019,
+            "is_label": true,
+            "value_mean": 163.5497,
+            "saturation_mean": 57.9868,
+            "ring_background": 0.904,
+            "text_blobs": 13,
+            "text_row_blobs": 6,
+            "pair_cost": 125.9,
+            "text": "",
+            "ocr_confidence": 0.0
+          }
+        }
+      ],
+      "files": {
+        "labels": [
+          "label_01.png"
+        ],
+        "mineral": "mineral.png",
+        "mineral_mask": "mineral_mask.png",
+        "mineral_crop": "mineral_crop.jpg",
+        "transcription": "transcription.txt",
+        "pair": "pair.jpg"
+      }
+    },
+    {
+      "id": "segment_36",
+      "kind": "specimen_with_label",
+      "bbox": [
+        3227,
+        644,
+        3495,
+        909
+      ],
+      "transcription": "",
+      "specimen": {
+        "kind": "specimen",
+        "bbox": [
+          3227,
+          644,
+          3495,
+          820
+        ],
+        "centroid": [
+          3355.9,
+          737.6
+        ],
+        "area_px": 33141,
+        "score": 0.9898,
+        "stats": {
+          "area_frac": 0.0044,
+          "n_source_masks": 3,
+          "refine_iou": 0.969,
+          "refine_growth": 0.987,
+          "refined": true
+        }
+      },
+      "labels": [
+        {
+          "kind": "label",
+          "bbox": [
+            3265,
+            858,
+            3458,
+            909
+          ],
+          "centroid": [
+            3360.3,
+            883.2
+          ],
+          "area_px": 8713,
+          "score": 0.9547,
+          "stats": {
+            "rect_fill": 0.9076,
+            "solidity": 0.9896,
+            "aspect": 3.84,
+            "angle": -90.0,
+            "extent": 0.8852,
+            "area_frac": 0.0012,
+            "is_label": true,
+            "value_mean": 186.9955,
+            "saturation_mean": 51.2637,
+            "ring_background": 1.0,
+            "text_blobs": 18,
+            "text_row_blobs": 7,
+            "pair_cost": 151.3,
+            "text": "",
+            "ocr_confidence": 0.0
+          }
+        }
+      ],
+      "files": {
+        "labels": [
+          "label_01.png"
+        ],
+        "mineral": "mineral.png",
+        "mineral_mask": "mineral_mask.png",
+        "mineral_crop": "mineral_crop.jpg",
+        "transcription": "transcription.txt",
+        "pair": "pair.jpg"
+      }
+    },
+    {
+      "id": "segment_37",
+      "kind": "specimen_only",
+      "bbox": [
+        3494,
+        1769,
+        3713,
+        1848
+      ],
+      "transcription": "",
+      "specimen": {
+        "kind": "specimen",
+        "bbox": [
+          3494,
+          1769,
+          3713,
+          1848
+        ],
+        "centroid": [
+          3609.4,
+          1812.2
+        ],
+        "area_px": 12909,
+        "score": 0.9613,
+        "stats": {
+          "area_frac": 0.0017,
+          "n_source_masks": 1,
+          "refine_iou": 0.932,
+          "refine_growth": 0.937,
+          "refined": true
+        }
+      },
+      "labels": [],
+      "files": {
+        "labels": [],
+        "mineral": "mineral.png",
+        "mineral_mask": "mineral_mask.png",
+        "mineral_crop": "mineral_crop.jpg",
+        "pair": "pair.jpg"
+      }
+    },
+    {
+      "id": "segment_38",
+      "kind": "specimen_with_label",
+      "bbox": [
+        3524,
+        1270,
+        3830,
+        1528
+      ],
+      "transcription": "",
+      "specimen": {
+        "kind": "specimen",
+        "bbox": [
+          3524,
+          1270,
+          3830,
+          1446
+        ],
+        "centroid": [
+          3683.8,
+          1351.2
+        ],
+        "area_px": 37792,
+        "score": 0.9909,
+        "stats": {
+          "area_frac": 0.0051,
+          "n_source_masks": 1,
+          "refine_iou": 0.975,
+          "refine_growth": 0.977,
+          "refined": true
+        }
+      },
+      "labels": [
+        {
+          "kind": "label",
+          "bbox": [
+            3614,
+            1469,
+            3784,
+            1528
+          ],
+          "centroid": [
+            3698.8,
+            1498.2
+          ],
+          "area_px": 8179,
+          "score": 1.0,
+          "stats": {
+            "rect_fill": 0.8474,
+            "solidity": 0.9738,
+            "aspect": 2.9977,
+            "angle": -88.4926,
+            "extent": 0.8155,
+            "area_frac": 0.0011,
+            "is_label": true,
+            "value_mean": 161.0504,
+            "saturation_mean": 58.9592,
+            "ring_background": 0.991,
+            "text_blobs": 23,
+            "text_row_blobs": 5,
+            "pair_cost": 140.3,
+            "text": "",
+            "ocr_confidence": 0.0
+          }
+        }
+      ],
+      "files": {
+        "labels": [
+          "label_01.png"
+        ],
+        "mineral": "mineral.png",
+        "mineral_mask": "mineral_mask.png",
+        "mineral_crop": "mineral_crop.jpg",
+        "transcription": "transcription.txt",
+        "pair": "pair.jpg"
+      }
+    },
+    {
+      "id": "segment_39",
+      "kind": "specimen_with_label",
+      "bbox": [
+        3799,
+        896,
+        4000,
+        1168
+      ],
+      "transcription": "",
+      "specimen": {
+        "kind": "specimen",
+        "bbox": [
+          3799,
+          896,
+          4000,
+          1082
+        ],
+        "centroid": [
+          3919.1,
+          989.6
+        ],
+        "area_px": 24086,
+        "score": 0.9402,
+        "stats": {
+          "area_frac": 0.0032,
+          "n_source_masks": 1,
+          "refine_iou": 0.946,
+          "refine_growth": 0.974,
+          "refined": true
+        }
+      },
+      "labels": [
+        {
+          "kind": "label",
+          "bbox": [
+            3878,
+            1111,
+            4000,
+            1168
+          ],
+          "centroid": [
+            3943.0,
+            1139.9
+          ],
+          "area_px": 5484,
+          "score": 1.0,
+          "stats": {
+            "rect_fill": 0.8414,
+            "solidity": 0.9695,
+            "aspect": 2.3372,
+            "angle": -86.8202,
+            "extent": 0.7886,
+            "area_frac": 0.0007,
+            "is_label": true,
+            "value_mean": 164.3051,
+            "saturation_mean": 19.8466,
+            "ring_background": 1.0,
+            "text_blobs": 11,
+            "text_row_blobs": 4,
+            "pair_cost": 146.0,
+            "text": "",
+            "ocr_confidence": 0.0
+          }
+        }
+      ],
+      "files": {
+        "labels": [
+          "label_01.png"
+        ],
+        "mineral": "mineral.png",
+        "mineral_mask": "mineral_mask.png",
+        "mineral_crop": "mineral_crop.jpg",
+        "transcription": "transcription.txt",
+        "pair": "pair.jpg"
+      }
+    }
+  ]
+}
