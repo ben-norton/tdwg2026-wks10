@@ -1,0 +1,312 @@
+id	is_part_of	material_category	cataloged_name	authoritative_name	verbatim_name	collection_code	institution_code	country	first_order_division	second_order_division
+MIN.052034		Mineral	Chrysoberyl	Chrysoberyl		DEMO-C	DEMO	USA	Connecticut	Middlesex County
+	MIN.052034	Mineral		Chrysoberyl		DEMO-C	DEMO			
+	MIN.052034	Mineral		Garnet		DEMO-C	DEMO			
+MIN.058343		Mineral	Beryl	Beryl		DEMO-C	DEMO	USA	Connecticut	Middlesex County
+	MIN.058343	Mineral		Beryl		DEMO-C	DEMO			
+	MIN.058343	Mineral		Tourmaline		DEMO-C	DEMO			
+	MIN.058343	Mineral		Muscovite		DEMO-C	DEMO			
+	MIN.058343	Mineral		Quartz		DEMO-C	DEMO			
+MIN.101311		Mineral	Clinohedrite	Clinohedrite		DEMO-C	DEMO	USA	New Jersey	Sussex County
+	MIN.101311	Mineral		Clinohedrite		DEMO-C	DEMO			
+	MIN.101311	Mineral		Hardystonite		DEMO-C	DEMO			
+	MIN.101311	Mineral		Willemite		DEMO-C	DEMO			
+	MIN.101311	Mineral		Andradite		DEMO-C	DEMO			
+MIN.101529		Mineral	Margarosanite	Margarosanite		DEMO-C	DEMO	USA	New Jersey	Sussex County
+	MIN.101529	Mineral		Margarosanite		DEMO-C	DEMO			
+	MIN.101529	Mineral		Willemite		DEMO-C	DEMO			
+	MIN.101529	Mineral		Andradite		DEMO-C	DEMO			
+	MIN.101529	Mineral		Franklinite		DEMO-C	DEMO			
+MIN.101644		Mineral	Hardystonite	Hardystonite		DEMO-C	DEMO	USA	New Jersey	Sussex County
+	MIN.101644	Mineral		Hardystonite		DEMO-C	DEMO			
+	MIN.101644	Mineral		Willemite		DEMO-C	DEMO			
+	MIN.101644	Mineral		Calcite		DEMO-C	DEMO			
+	MIN.101644	Mineral		Franklinite		DEMO-C	DEMO			
+MIN.101345		Mineral	Tugtupite	Tugtupite		DEMO-C	DEMO	Denmark	Greenland	Kujalleq Municipality
+	MIN.101345	Mineral		Tugtupite		DEMO-C	DEMO			
+	MIN.101345	Mineral		Polylithionite		DEMO-C	DEMO			
+	MIN.101345	Mineral		Analcime		DEMO-C	DEMO			
+	MIN.101345	Rock		Lujavrite		DEMO-C	DEMO			
+MIN.101592		Mineral	Chkalovite	Chkalovite		DEMO-C	DEMO	Denmark	Greenland	
+	MIN.101592	Mineral		Chkalovite		DEMO-C	DEMO			
+	MIN.101592	Mineral		Tugtupite		DEMO-C	DEMO			
+	MIN.101592	Mineral		Beryllite		DEMO-C	DEMO			
+MIN.104124		Mineral	Grossular	Grossular		DEMO-C	DEMO	USA	Connecticut	Fairfield County
+	MIN.104124	Mineral		Grossular		DEMO-C	DEMO			
+	MIN.104124	Mineral		Diopside		DEMO-C	DEMO			
+	MIN.104124	Mineral		Scheelite		DEMO-C	DEMO			
+	MIN.104124	Mineral		Calcite		DEMO-C	DEMO			
+MIN.026931		Mineral	Stilbite	Stilbite		DEMO-C	DEMO	USA	Connecticut	Litchfield County
+	MIN.026931	Mineral		Stilbite		DEMO-C	DEMO			
+	MIN.026931	Mineral		Quartz		DEMO-C	DEMO			
+MIN.104130		Mineral	Bavenite	Bavenite		DEMO-C	DEMO	USA	Connecticut	Fairfield County
+	MIN.104130	Mineral		Bavenite		DEMO-C	DEMO			
+	MIN.104130	Mineral		Calcite		DEMO-C	DEMO			
+	MIN.104130	Mineral		Chlorite		DEMO-C	DEMO			
+	MIN.104130	Mineral		Fluorite		DEMO-C	DEMO			
+MIN.104138		Mineral	Sphalerite	Sphalerite		DEMO-C	DEMO	USA	Connecticut	Litchfield County
+	MIN.104138	Mineral		Sphalerite		DEMO-C	DEMO			
+	MIN.104138	Mineral		Hemimorphite		DEMO-C	DEMO			
+	MIN.104138	Mineral		Galena		DEMO-C	DEMO			
+	MIN.104138	Mineral		Quartz		DEMO-C	DEMO			
+MIN.104139		Mineral	Hemimorphite	Hemimorphite		DEMO-C	DEMO	USA	Connecticut	Litchfield County
+	MIN.104139	Mineral		Hemimorphite		DEMO-C	DEMO			
+	MIN.104139	Mineral		Sphalerite		DEMO-C	DEMO			
+	MIN.104139	Mineral		Quartz		DEMO-C	DEMO			
+MIN.104140		Mineral	Hemimorphite	Hemimorphite		DEMO-C	DEMO	USA	Connecticut	Litchfield County
+	MIN.104140	Mineral		Hemimorphite		DEMO-C	DEMO			
+	MIN.104140	Mineral		Sphalerite		DEMO-C	DEMO			
+	MIN.104140	Mineral		Heulandite		DEMO-C	DEMO			
+	MIN.104140	Mineral		Calcite		DEMO-C	DEMO			
+	MIN.104140	Mineral		Quartz		DEMO-C	DEMO			
+MIN.104143		Mineral	Sphalerite	Sphalerite		DEMO-C	DEMO	USA	Connecticut	Litchfield County
+	MIN.104143	Mineral		Sphalerite		DEMO-C	DEMO			
+	MIN.104143	Mineral		Quartz		DEMO-C	DEMO			
+	MIN.104143	Mineral		Heulandite		DEMO-C	DEMO			
+MIN.101138		Mineral	Cordierite	Cordierite		DEMO-C	DEMO	USA	Connecticut	Middlesex County
+	MIN.101138	Mineral		Cordierite		DEMO-C	DEMO			
+	MIN.101138	Mineral		Quartz		DEMO-C	DEMO			
+	MIN.101138	Mineral		Schorl		DEMO-C	DEMO			
+MIN.101139		Mineral	Cordierite	Cordierite		DEMO-C	DEMO	USA	Connecticut	Middlesex County
+	MIN.101139	Mineral		Cordierite		DEMO-C	DEMO			
+	MIN.101139	Mineral		Quartz		DEMO-C	DEMO			
+	MIN.101139	Mineral		Albite		DEMO-C	DEMO			
+	MIN.101139	Mineral		Schorl		DEMO-C	DEMO			
+MIN.101140		Mineral	Cordierite	Cordierite		DEMO-C	DEMO	USA	Connecticut	Middlesex County
+	MIN.101140	Mineral		Cordierite		DEMO-C	DEMO			
+	MIN.101140	Mineral		Quartz		DEMO-C	DEMO			
+	MIN.101140	Mineral		Schorl		DEMO-C	DEMO			
+MIN.102179		Mineral	Scapolite	Scapolite		DEMO-C	DEMO	USA	Connecticut	New Haven County
+	MIN.102179	Mineral		Scapolite		DEMO-C	DEMO			
+	MIN.102179	Mineral		Pyrite		DEMO-C	DEMO			
+	MIN.102179	Mineral		Diopside		DEMO-C	DEMO			
+	MIN.102179	Mineral		Serpentine Lizardite		DEMO-C	DEMO			
+MIN.101133		Mineral	Gedrite	Gedrite		DEMO-C	DEMO	USA	Connecticut	Middlesex County
+	MIN.101133	Mineral		Gedrite		DEMO-C	DEMO			
+	MIN.101133	Mineral		Almandine		DEMO-C	DEMO			
+	MIN.101133	Mineral		Albite		DEMO-C	DEMO			
+	MIN.101133	Mineral		Quartz		DEMO-C	DEMO			
+	MIN.101133	Mineral		Magnetite		DEMO-C	DEMO			
+MIN.101134		Mineral	Gedrite	Gedrite		DEMO-C	DEMO	USA	Connecticut	Middlesex County
+	MIN.101134	Mineral		Gedrite		DEMO-C	DEMO			
+	MIN.101134	Mineral		Almandine		DEMO-C	DEMO			
+	MIN.101134	Mineral		Albite		DEMO-C	DEMO			
+	MIN.101134	Mineral		Quartz		DEMO-C	DEMO			
+	MIN.101134	Mineral		Magnetite		DEMO-C	DEMO			
+MIN.101135		Mineral	Gedrite	Gedrite		DEMO-C	DEMO	USA	Connecticut	Middlesex County
+	MIN.101135	Mineral		Gedrite		DEMO-C	DEMO			
+	MIN.101135	Mineral		Almandine		DEMO-C	DEMO			
+	MIN.101135	Mineral		Albite		DEMO-C	DEMO			
+	MIN.101135	Mineral		Quartz		DEMO-C	DEMO			
+	MIN.101135	Mineral		Magnetite		DEMO-C	DEMO			
+MIN.101136		Mineral	Gedrite	Gedrite		DEMO-C	DEMO	USA	Connecticut	Middlesex County
+	MIN.101136	Mineral		Gedrite		DEMO-C	DEMO			
+	MIN.101136	Mineral		Almandine		DEMO-C	DEMO			
+	MIN.101136	Mineral		Albite		DEMO-C	DEMO			
+	MIN.101136	Mineral		Quartz		DEMO-C	DEMO			
+	MIN.101136	Mineral		Magnetite		DEMO-C	DEMO			
+MIN.101137		Mineral	Gedrite	Gedrite		DEMO-C	DEMO	USA	Connecticut	Middlesex County
+	MIN.101137	Mineral		Gedrite		DEMO-C	DEMO			
+	MIN.101137	Mineral		Almandine		DEMO-C	DEMO			
+	MIN.101137	Mineral		Albite		DEMO-C	DEMO			
+	MIN.101137	Mineral		Quartz		DEMO-C	DEMO			
+	MIN.101137	Mineral		Magnetite		DEMO-C	DEMO			
+MIN.101131		Mineral	Gedrite	Gedrite		DEMO-C	DEMO	USA	Connecticut	Middlesex County
+	MIN.101131	Mineral		Gedrite		DEMO-C	DEMO			
+	MIN.101131	Mineral		Almandine		DEMO-C	DEMO			
+	MIN.101131	Mineral		Albite		DEMO-C	DEMO			
+	MIN.101131	Mineral		Quartz		DEMO-C	DEMO			
+	MIN.101131	Mineral		Magnetite		DEMO-C	DEMO			
+MIN.101132		Mineral	Gedrite	Gedrite		DEMO-C	DEMO	USA	Connecticut	Middlesex County
+	MIN.101132	Mineral		Gedrite		DEMO-C	DEMO			
+	MIN.101132	Mineral		Almandine		DEMO-C	DEMO			
+	MIN.101132	Mineral		Albite		DEMO-C	DEMO			
+	MIN.101132	Mineral		Quartz		DEMO-C	DEMO			
+	MIN.101132	Mineral		Magnetite		DEMO-C	DEMO			
+MIN.012937		Mineral	Franklinite	Franklinite		DEMO-C	DEMO	USA	New Jersey	Sussex County
+	MIN.012937	Mineral		Franklinite		DEMO-C	DEMO			
+	MIN.012937	Mineral		Zincite		DEMO-C	DEMO			
+	MIN.012937	Mineral		Calcite		DEMO-C	DEMO			
+MIN.026562		Mineral	Spessartine	Spessartine		DEMO-C	DEMO	USA	California	San Diego County
+	MIN.026562	Mineral		Spessartine		DEMO-C	DEMO			
+	MIN.026562	Mineral		Garnet group		DEMO-C	DEMO			
+MIN.042523		Mineral	Datolite	Datolite		DEMO-C	DEMO	USA	Connecticut	Hartford County
+	MIN.042523	Mineral		Datolite		DEMO-C	DEMO			
+	MIN.042523	Mineral		Apophyllite		DEMO-C	DEMO			
+	MIN.042523	Mineral		Prehnite		DEMO-C	DEMO			
+MIN.045019		Mineral	Elbaite	Elbaite		DEMO-C	DEMO	USA	Connecticut	Middlesex County
+	MIN.045019	Mineral		Elbaite		DEMO-C	DEMO			
+	MIN.045019	Mineral		Tourmaline		DEMO-C	DEMO			
+MIN.050270		Mineral	Bismuth	Bismuth		DEMO-C	DEMO	USA	Connecticut	Fairfield County
+	MIN.050270	Mineral		Bismuth		DEMO-C	DEMO			
+	MIN.050270	Mineral		Quartz		DEMO-C	DEMO			
+MIN.053052		Mineral	Tremolite	Tremolite		DEMO-C	DEMO	USA	Connecticut	Litchfield County
+	MIN.053052	Mineral		Tremolite		DEMO-C	DEMO			
+	MIN.053052	Mineral		Dolomite		DEMO-C	DEMO			
+MIN.100930		Mineral	Calcite	Calcite		DEMO-C	DEMO	Romania	Maramureş	Maramureş
+	MIN.100930	Mineral		Calcite		DEMO-C	DEMO			
+	MIN.100930	Mineral		Jamesonite		DEMO-C	DEMO			
+MIN.101077		Mineral	Kyanite	Kyanite		DEMO-C	DEMO	Australia	Northern Territory	Harts Range
+	MIN.101077	Mineral		Kyanite		DEMO-C	DEMO			
+	MIN.101077	Mineral		Biotite		DEMO-C	DEMO			
+MIN.101130		Mineral	Gedrite	Gedrite		DEMO-C	DEMO	USA	Connecticut	Middlesex County
+	MIN.101130	Mineral		Gedrite		DEMO-C	DEMO			
+	MIN.101130	Mineral		Almandine		DEMO-C	DEMO			
+	MIN.101130	Mineral		Albite		DEMO-C	DEMO			
+	MIN.101130	Mineral		Quartz		DEMO-C	DEMO			
+	MIN.101130	Mineral		Magnetite		DEMO-C	DEMO			
+MIN.101147		Mineral	Microcline	Microcline		DEMO-C	DEMO	Poland	Lower Silesian Voivodeship	Świdnica
+	MIN.101147	Mineral		Microcline		DEMO-C	DEMO			
+	MIN.101147	Mineral		Epidote		DEMO-C	DEMO			
+	MIN.101147	Mineral		Chamosite		DEMO-C	DEMO			
+MIN.101487		Mineral	Willemite	Willemite		DEMO-C	DEMO	USA	New Jersey	Sussex County
+	MIN.101487	Mineral		Willemite		DEMO-C	DEMO			
+	MIN.101487	Mineral		Tephroite		DEMO-C	DEMO			
+	MIN.101487	Mineral		Calcite		DEMO-C	DEMO			
+	MIN.101487	Mineral		Franklinite		DEMO-C	DEMO			
+MIN.101610		Mineral	Baratovite	Baratovite		DEMO-C	DEMO	Tajikistan	Districts of Republican Subordination Region	
+	MIN.101610	Mineral		Baratovite		DEMO-C	DEMO			
+	MIN.101610	Mineral		Miserite		DEMO-C	DEMO			
+	MIN.101610	Mineral		Quartz		DEMO-C	DEMO			
+	MIN.101610	Mineral		Albite		DEMO-C	DEMO			
+	MIN.101610	Mineral		Aegirine		DEMO-C	DEMO			
+MIN.103099		Mineral	Esperite	Esperite		DEMO-C	DEMO	USA	New Jersey	Sussex County
+	MIN.103099	Mineral		Esperite		DEMO-C	DEMO			
+	MIN.103099	Mineral		Willemite		DEMO-C	DEMO			
+MIN.103193		Mineral	Agrellite	Agrellite		DEMO-C	DEMO	Canada	Quebec	Temiscamingue County
+	MIN.103193	Mineral		Agrellite		DEMO-C	DEMO			
+	MIN.103193	Mineral		Eudialyte		DEMO-C	DEMO			
+MIN.103843		Mineral	Fluorapatite	Fluorapatite		DEMO-C	DEMO	USA	Connecticut	Middlesex County
+	MIN.103843	Mineral		Fluorapatite		DEMO-C	DEMO			
+	MIN.103843	Mineral		Lepidolite		DEMO-C	DEMO			
+	MIN.103843	Mineral		Albite		DEMO-C	DEMO			
+	MIN.103843	Mineral		Muscovite	schernikite	DEMO-C	DEMO			
+MIN.101121		Mineral	Veszelyite	Veszelyite		DEMO-C	DEMO	Republic of The Congo	Bouenza	Mfouati
+	MIN.101121	Mineral		Veszelyite		DEMO-C	DEMO			
+	MIN.101121	Mineral		Hemimorphite		DEMO-C	DEMO			
+	MIN.101121	Mineral		Kipushite		DEMO-C	DEMO			
+	MIN.101121	Mineral		Zincolibethenite		DEMO-C	DEMO			
+MIN.102109		Mineral	Uraninite	Uraninite		DEMO-C	DEMO	USA	New Hampshire	Cheshire County
+	MIN.102109	Mineral		Uraninite		DEMO-C	DEMO			
+	MIN.102109	Mineral		Uranophane		DEMO-C	DEMO			
+	MIN.102109	Mineral		Fluorapatite		DEMO-C	DEMO			
+	MIN.102109	Mineral		Vandendriesscheite		DEMO-C	DEMO			
+MIN.101422		Mineral	Phlogopite	Phlogopite		DEMO-C	DEMO	USA	New York	Essex County
+	MIN.101422	Mineral		Phlogopite		DEMO-C	DEMO			
+	MIN.101422	Mineral		Sodalite	hackmanite	DEMO-C	DEMO			
+	MIN.101422	Mineral		Mica		DEMO-C	DEMO			
+MIN.104002		Mineral	Meta-Autunite	Meta-Autunite		DEMO-C	DEMO	USA	Connecticut	Middlesex County
+	MIN.104002	Mineral		Meta-Autunite		DEMO-C	DEMO			
+	MIN.104002	Mineral		Fluorapatite		DEMO-C	DEMO			
+	MIN.104002	Mineral		Quartz		DEMO-C	DEMO			
+	MIN.104002	Mineral		Muscovite		DEMO-C	DEMO			
+MIN.104034		Mineral	Meta-Autunite	Meta-Autunite		DEMO-C	DEMO	USA	Connecticut	Middlesex County
+	MIN.104034	Mineral		Meta-Autunite		DEMO-C	DEMO			
+	MIN.104034	Mineral		Uraninite		DEMO-C	DEMO			
+	MIN.104034	Mineral		Beryl		DEMO-C	DEMO			
+	MIN.104034	Mineral		Albite		DEMO-C	DEMO			
+MIN.104037		Mineral	Meta-Autunite	Meta-Autunite		DEMO-C	DEMO	USA	Connecticut	Middlesex County
+	MIN.104037	Mineral		Meta-Autunite		DEMO-C	DEMO			
+	MIN.104037	Mineral		Uranophane		DEMO-C	DEMO			
+	MIN.104037	Mineral		Quartz		DEMO-C	DEMO			
+	MIN.104037	Mineral		Albite		DEMO-C	DEMO			
+MIN.103735		Mineral	Corundum var. ruby	Corundum	ruby	DEMO-C	DEMO	Tanzania	Arusha Region	Longido District
+	MIN.103735	Mineral		Corundum	ruby	DEMO-C	DEMO			
+	MIN.103735	Mineral		Zoisite		DEMO-C	DEMO			
+	MIN.103735	Mineral		Pargasite		DEMO-C	DEMO			
+MIN.103916		Mineral	Chlorite	Chlorite		DEMO-C	DEMO	USA	Connecticut	Hartford County
+	MIN.103916	Mineral		Chlorite		DEMO-C	DEMO			
+	MIN.103916	Mineral		Apophyllite		DEMO-C	DEMO			
+	MIN.103916	Mineral		Prehnite		DEMO-C	DEMO			
+	MIN.103916	Mineral		Sphalerite		DEMO-C	DEMO			
+MIN.103999		Mineral	Opal var. hyalite	Opal	hyalite	DEMO-C	DEMO	USA	Connecticut	Middlesex County
+	MIN.103999	Mineral		Opal	hyalite	DEMO-C	DEMO			
+	MIN.103999	Mineral		Quartz		DEMO-C	DEMO			
+	MIN.103999	Mineral		Albite		DEMO-C	DEMO			
+	MIN.103999	Mineral		Muscovite		DEMO-C	DEMO			
+MIN.104004		Mineral	Fluorapatite	Fluorapatite		DEMO-C	DEMO	USA	North Carolina	Mitchell County
+	MIN.104004	Mineral		Fluorapatite		DEMO-C	DEMO			
+	MIN.104004	Mineral		Meta-Autunite		DEMO-C	DEMO			
+	MIN.104004	Mineral		Almandine		DEMO-C	DEMO			
+	MIN.104004	Mineral		Microcline		DEMO-C	DEMO			
+MIN.103897		Mineral	Quartz	Quartz		DEMO-C	DEMO	USA	Connecticut	Hartford County
+	MIN.103897	Mineral		Quartz		DEMO-C	DEMO			
+	MIN.103897	Mineral		Chlorite		DEMO-C	DEMO			
+	MIN.103897	Mineral		Calcite		DEMO-C	DEMO			
+	MIN.103897	Mineral		Epidote		DEMO-C	DEMO			
+MIN.104064		Mineral	Vandendriesscheite	Vandendriesscheite		DEMO-C	DEMO	USA	New Hampshire	Grafton County
+	MIN.104064	Mineral		Vandendriesscheite		DEMO-C	DEMO			
+	MIN.104064	Mineral		Meta-Autunite		DEMO-C	DEMO			
+	MIN.104064	Mineral		Uraninite		DEMO-C	DEMO			
+	MIN.104064	Mineral		Zircon		DEMO-C	DEMO			
+	MIN.104064	Mineral		Microcline		DEMO-C	DEMO			
+MIN.101206		Mineral	Agrellite	Agrellite		DEMO-C	DEMO	Canada	Quebec	Temiscamingue County
+	MIN.101206	Mineral		Agrellite		DEMO-C	DEMO			
+	MIN.101206	Mineral		Catapleiite		DEMO-C	DEMO			
+MIN.101525		Mineral	Esperite	Esperite		DEMO-C	DEMO	USA	New Jersey	Sussex County
+	MIN.101525	Mineral		Esperite		DEMO-C	DEMO			
+	MIN.101525	Mineral		Willemite		DEMO-C	DEMO			
+	MIN.101525	Mineral		Hardystonite		DEMO-C	DEMO			
+	MIN.101525	Mineral		Calcite		DEMO-C	DEMO			
+MIN.101685		Mineral	Fluorite	Fluorite		DEMO-C	DEMO	USA	Utah	Juab County
+	MIN.101685	Mineral		Fluorite		DEMO-C	DEMO			
+	MIN.101685	Mineral		Opal		DEMO-C	DEMO			
+	MIN.101685	Mineral		Quartz	chalcedony	DEMO-C	DEMO			
+	MIN.101685	Mineral		Bertrandite		DEMO-C	DEMO			
+MIN.101236		Mineral	Diopside	Diopside		DEMO-C	DEMO	Canada	Ontario	Hastings County
+	MIN.101236	Mineral		Diopside		DEMO-C	DEMO			
+	MIN.101236	Mineral		Norbergite		DEMO-C	DEMO			
+	MIN.101236	Mineral		Dolomite		DEMO-C	DEMO			
+	MIN.101236	Mineral		Lazurite		DEMO-C	DEMO			
+MIN.104073		Mineral	Uraninite	Uraninite		DEMO-C	DEMO	USA	Connecticut	Middlesex County
+	MIN.104073	Mineral		Uraninite		DEMO-C	DEMO			
+	MIN.104073	Mineral		Meta-Autunite		DEMO-C	DEMO			
+	MIN.104073	Mineral		Uranophane		DEMO-C	DEMO			
+	MIN.104073	Mineral		Fluorapatite		DEMO-C	DEMO			
+MIN.103935		Mineral	Apophyllite	Apophyllite		DEMO-C	DEMO	USA	Connecticut	Hartford County
+	MIN.103935	Mineral		Apophyllite		DEMO-C	DEMO			
+	MIN.103935	Mineral		Chlorite		DEMO-C	DEMO			
+	MIN.103935	Mineral		Calcite		DEMO-C	DEMO			
+	MIN.103935	Mineral		Quartz		DEMO-C	DEMO			
+MIN.103934		Mineral	Apophyllite	Apophyllite		DEMO-C	DEMO	USA	Connecticut	Hartford County
+	MIN.103934	Mineral		Apophyllite		DEMO-C	DEMO			
+	MIN.103934	Mineral		Chlorite		DEMO-C	DEMO			
+	MIN.103934	Mineral		Calcite		DEMO-C	DEMO			
+	MIN.103934	Mineral		Quartz		DEMO-C	DEMO			
+MIN.103933		Mineral	Apophyllite	Apophyllite		DEMO-C	DEMO	USA	Connecticut	Hartford County
+	MIN.103933	Mineral		Apophyllite		DEMO-C	DEMO			
+	MIN.103933	Mineral		Chlorite		DEMO-C	DEMO			
+	MIN.103933	Mineral		Calcite		DEMO-C	DEMO			
+	MIN.103933	Mineral		Quartz		DEMO-C	DEMO			
+MIN.102091		Mineral	Garnet	Garnet		DEMO-C	DEMO	USA	Connecticut	Hartford County
+	MIN.102091	Mineral		Garnet		DEMO-C	DEMO			
+	MIN.102091	Mineral		Fluorapatite		DEMO-C	DEMO			
+	MIN.102091	Mineral		Zircon		DEMO-C	DEMO			
+	MIN.102091	Mineral		Pyrite		DEMO-C	DEMO			
+	MIN.102091	Fossil		Carpites sp.		DEMO-C	DEMO			
+MIN.102180		Mineral	Chalcopyrite	Chalcopyrite		DEMO-C	DEMO	USA	Connecticut	New Haven County
+	MIN.102180	Mineral		Chalcopyrite		DEMO-C	DEMO			
+	MIN.102180	Mineral		Malachite		DEMO-C	DEMO			
+	MIN.102180	Mineral		Diopside		DEMO-C	DEMO			
+	MIN.102180	Mineral		Chlorite		DEMO-C	DEMO			
+	MIN.102180	Mineral		Calcite		DEMO-C	DEMO			
+MIN.104134		Mineral	Pyromorphite	Pyromorphite		DEMO-C	DEMO	USA	Connecticut	Fairfield County
+	MIN.104134	Mineral		Pyromorphite		DEMO-C	DEMO			
+	MIN.104134	Mineral		Galena		DEMO-C	DEMO			
+	MIN.104134	Mineral		Quartz		DEMO-C	DEMO			
+MIN.104135		Mineral	Pyromorphite	Pyromorphite		DEMO-C	DEMO	USA	Connecticut	Fairfield County
+	MIN.104135	Mineral		Pyromorphite		DEMO-C	DEMO			
+	MIN.104135	Mineral		Galena		DEMO-C	DEMO			
+	MIN.104135	Mineral		Quartz		DEMO-C	DEMO			
+MIN.104136		Mineral	Cerussite	Cerussite		DEMO-C	DEMO	USA	Connecticut	Fairfield County
+	MIN.104136	Mineral		Cerussite		DEMO-C	DEMO			
+	MIN.104136	Mineral		Galena		DEMO-C	DEMO			
+	MIN.104136	Mineral		Quartz		DEMO-C	DEMO			
+MIN.104137		Mineral	Anglesite	Anglesite		DEMO-C	DEMO	USA	Connecticut	Fairfield County
+	MIN.104137	Mineral		Anglesite		DEMO-C	DEMO			
+	MIN.104137	Mineral		Sphalerite		DEMO-C	DEMO			
+	MIN.104137	Mineral		Quartz		DEMO-C	DEMO			
+	MIN.104137	Mineral		Fluorite		DEMO-C	DEMO			
+MIN.023684		Mineral	Spodumene	Spodumene		DEMO-C	DEMO	USA	Connecticut	Fairfield County
+	MIN.023684	Mineral		Spodumene		DEMO-C	DEMO			
+	MIN.023684	Mineral		Eucryptite		DEMO-C	DEMO			
