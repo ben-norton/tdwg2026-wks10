@@ -1,5 +1,5 @@
 # Compound Specimen Data Model Specification
-> 2026-09-24
+> 2026-09-24 (updated 2026-09-28)
 > compound_specimen_data_model_specification.md
 > geoda-transformation-pipeline
 
@@ -8,9 +8,10 @@ How this repository represents a geologic specimen made of several materials —
 one self-referencing table that carries it, the rules that table must satisfy, how the
 pipeline builds it, and where the datasets on disk currently depart from it.
 
-It extends the short draft `compound_specimens_specification.md` (2026-09-16, same folder,
-duplicated byte-for-byte in `docs/admin/`), which remains the file
-`src/build/build_compound_specimen_sample.py` cites.
+It absorbs the former draft `compound_model_specification.md` (merged 2026-09-28): its
+definitions are §2.1 and its data-model rules are the row classes of §5. The
+demo template `docs/samples/demo_compound_specimens_data.csv` is worked through in §5.1, and
+the name rules of `compound_specimen_rules.md` are §6.3.
 
 ---
 
@@ -33,7 +34,8 @@ duplicated byte-for-byte in `docs/admin/`), which remains the file
 
 ## 1. Scope and sources
 
-**Normative** — where this document and these disagree, these govern:
+**Normative** — where this document and these disagree, these govern, with one deliberate
+exception: `authoritative_name` **MAY** be empty on a compound specimen row (§6.3).
 
 | Source | What it contributes |
 |---|---|
@@ -45,6 +47,18 @@ duplicated byte-for-byte in `docs/admin/`), which remains the file
 | Source | What it contributes |
 |---|---|
 | `docs/supplementals/GCDM.CompoundSpecimenSection_20260903.md` §3 | Geologic Collections Data Model: compound specimen, specimen part, role, proportion, material category, age/unit inheritance |
+
+**Repository rules** — bind this repository's files:
+
+| Source | What it contributes |
+|---|---|
+| `docs/specifications/compound_specimen_rules.md` (2026-09-28) | which of `cataloged_name` / `authoritative_name` each row class requires, and the relaxation of schema §7.3 for compound specimen rows (§6.3) |
+
+**Illustrative** — a worked example, not evidence of any dataset:
+
+| Source | What it contributes |
+|---|---|
+| `docs/samples/demo_compound_specimens_data.csv` | 14 invented `DEMO-*` rows covering a simple specimen, flat compounds and a nested compound, with a `template_note` per row (§5.1) |
 
 **Descriptive** — how the repository implements and checks it:
 
@@ -73,9 +87,9 @@ The import schema's definitions are used throughout. GCDM terms are noted where 
 | **specimen** | One catalogued object held by a collection, identified by its catalog number. Comprises one or more parts arranged as a tree. *(schema 2.2)* |
 | **catalog number** | The collection's stable identifier for a specimen, unique within the collection. Conveyed in `id` on the specimen row. *(schema 2.3)* |
 | **part** | One discernible material of a specimen. Every specimen has at least one. *(schema 2.5)* |
-| **main part** | The part carrying the specimen's headline material — the material the object would be named by were it named by one. Described **on the specimen row itself**. *(schema 2.6)* |
+| **main part** | The part carrying the specimen's headline material — the material the object would be named by were it named by one. Described **on the specimen row itself**. *(schema 2.6)* A simple specimen always has one; a compound specimen **MAY** leave it undescribed (§6.3). |
 | **constituent part** | Any other part, characterised by its role and proportion. *(schema 2.7)* — the GCDM's **specimen part**. |
-| **specimen row** | A row whose `is_part_of` is empty. Describes one specimen and its main part. *(schema 2.8)* |
+| **specimen row** | A row whose `is_part_of` is empty. Describes one specimen and, where named, its main part. *(schema 2.8)* |
 | **part row** | A row whose `is_part_of` is non-empty. Describes one constituent part. *(schema 2.9)* |
 | **part tree** | The directed acyclic graph of one specimen's `is_part_of` references, rooted at its specimen row. *(schema 2.10)* |
 | **row id** | The value in `id`. On a specimen row it is the catalog number and persists; on a part row it is file-local and discarded after import. *(schema 2.4)* |
@@ -84,11 +98,38 @@ The import schema's definitions are used throughout. GCDM terms are noted where 
 | **intermediate part** | A part row that another part row references ("parts of parts", GCDM §3.3.1 (4)). |
 | **leaf part** | A part row nothing references. |
 | **cataloged name** | The name under which the object as a whole is catalogued (`cataloged_name`) — a specimen property, not a part property. |
+| **specimen name** | Any name assigned at the object level, before atomisation into parts; often a compound term. Lands in `cataloged_name`. *(§2.1)* |
+| **authoritative name** | A name from a formal nomenclature, assigned by an authoritative body on defined criteria (`authoritative_name`) — a part property. *(§2.1)* |
 
 > **Reconciling the two vocabularies.** The GCDM calls a single quartz crystal a compound
 > specimen with one part (GCDM §3.6). The import schema — and this repository — call it a
 > **simple specimen**, its one part being the main part on the specimen row. "Compound" in
 > this repository is the operational, structural sense of §5: *referenced by a part row*.
+
+### 2.1 Definitions
+
+A compound specimen is comprised of one to many specimen parts. The definitions below, carried
+over verbatim from the former draft `compound_model_specification.md`, say what those are and
+how each maps onto the terms above:
+
+| Term | Definition | Maps to |
+|---|---|---|
+| **Compound Specimen** | A collection object comprised of one or more discernible parts, called specimen parts, unified by physical attachment. The object's identity is determined by its specimen parts, which are distinguished from one another within a specific context. | the GCDM sense — "one or more" includes the one-part case this repository calls a *simple specimen*; the structural sense is §5 |
+| **Specimen Part** | A physically discernible, proximal portion of a compound specimen that carries a single determination and belongs to a single material category, distinguished from the rest of the parent specimen by its physical and chemical exclusivity. | **part** — one `authoritative_name`, one `material_category` per row (§7.1, §7.2) |
+| **Specimen Name** | Any name assigned to a specimen at the object level (before atomization into specimen parts). Often written as compound terms, a concatenation of multiple informal and formal identifiers. | `cataloged_name` on the specimen row |
+| **Authoritative Name** | A name assigned by an authoritative body based on a defined set of unambiguous criteria and belonging to a formal nomenclature. | `authoritative_name` — every part row and simple specimen; **MAY** be empty on a compound specimen row (§6.3) |
+| **Cataloged Name** | The unstructured name of a geological material for general, storage, curatorial, and/or presentation purposes. | `cataloged_name` — specimen rows only |
+
+"Unified by physical attachment" is the criterion §7.5 applies to exclude associated but
+unattached objects; "a single determination" is why two materials never share a part row.
+
+The data model in brief:
+
+| Rule | Detail |
+|---|---|
+| Compound specimen records have NULL `is_part_of`, and their `id` is IN the set of `is_part_of` values. | §5, class *compound specimen* |
+| Leaf specimen parts have `id` = NULL (or `catalog_number` = NULL before mapping); every part's `is_part_of` exists in the `id` column. An intermediate part — one other parts point at — **MUST** carry an `id`. | §5, classes *leaf part* and *intermediate part*; §6.1 rules 2 and 4 |
+| The relationship is a self-join, `id = is_part_of`. | §4 |
 
 ---
 
@@ -120,13 +161,15 @@ classDiagram
         label
         isAggregate
     }
-    Specimen "1" *-- "1" Part : main part (same row)
+    Specimen "1" *-- "0..1" Part : main part (same row)
     Part "1" *-- "0..*" Part : hasPart (is_part_of)
     Part "0..*" --> "1" MaterialCategory : material_category
     Part .. PartMembership : on constituent parts only
 ```
 
-- A **Specimen** has exactly one **main part**, and the pair occupies one row.
+- A **Specimen** has at most one **main part**, and the pair occupies one row. A simple
+  specimen always names it; a compound specimen **MAY** leave it unnamed, its materials then
+  being described entirely by its constituent parts (§6.3).
 - Any part — main or constituent — may have constituent parts, to any depth (schema §4.4).
 - **Role** and **proportion** qualify a constituent part's membership of its parent; they are
   meaningless on the main part and a consumer disregards them there (schema §7.4).
@@ -155,7 +198,7 @@ parent.id  =  child.is_part_of
 | `id` | identity | **REQUIRED** — the catalog number | empty, unless another row references it (§6) |
 | `is_part_of` | identity | **empty** — this alone makes it a specimen row | the parent's `id` |
 | `cataloged_name` | specimen property | the object's catalogue name | disregarded |
-| `authoritative_name` | part property — **REQUIRED** | the main part's name | the constituent's name |
+| `authoritative_name` | part property | the main part's name — **REQUIRED** on a simple specimen, **MAY** be empty on a compound specimen (§6.3) | **REQUIRED** — the constituent's name |
 | `verbatim_name` | part property | the main part's name as in the source | the constituent's name as in the source |
 | `material_category` | part property — **REQUIRED** | the main part's category | the constituent's category |
 | `material_subcategory` | part property | main part | constituent |
@@ -200,6 +243,71 @@ schema §4.2 b but is cleared in this repository (§6.2).
 "Empty" means absent, zero-length or whitespace only, after trimming (schema §3.4). In SQL,
 load empty strings as `NULL` before applying these predicates.
 
+### 5.1 Worked example: `docs/samples/demo_compound_specimens_data.csv`
+
+The demo template is 14 invented rows in four specimens, every name and place fictitious. Its
+columns are `id`, `is_part_of`, `material_category`, `material_subcategory`, `cataloged_name`,
+`authoritative_name`, `verbatim_name`, `collection_code`, `institution_code`, `locality_description` and
+`template_note`. The last is guidance for whoever fills the template in, not data.
+
+| `id` | `is_part_of` | `material_category` | `cataloged_name` | `authoritative_name` | Class |
+|---|---|---|---|---|---|
+| DEMO-001 | | Mineral | Fictionite | Fictionite | simple specimen |
+| DEMO-002 | | Mineral | Placeholderite, Exemplar, Mockstone | | compound specimen |
+| | DEMO-002 | Mineral | | Placeholderite | leaf part |
+| | DEMO-002 | Mineral | | Exemplar ¹ | leaf part |
+| | DEMO-002 | Mineral | | Mockstone ² | leaf part |
+| DEMO-003 | | Rock | Sample Aggregate | | compound specimen |
+| DEMO-003-A | DEMO-003 | Rock | | Notarockite | intermediate part |
+| | DEMO-003-A | Mineral | | Fauxlite | leaf part |
+| | DEMO-003-A | Mineral | | Dummynite | leaf part |
+| | DEMO-003-A | Mineral | | Pseudogläsit | leaf part |
+| DEMO-004 | | Ore | Imaginary Ore Assemblage | | compound specimen |
+| | DEMO-004 | Ore | | Pseudo-Ore | leaf part |
+| | DEMO-004 | Mineral | | Simulacrite | leaf part |
+| | DEMO-004 | Fossil | | Exampleites nullus | leaf part |
+
+¹ `verbatim_name` = `exemplar var. fictus`: the label text differs from the accepted name.
+² `material_subcategory` = `Silicate`, the one row filling the optional column.
+
+```mermaid
+flowchart LR
+    D1[DEMO-001<br/>Fictionite · Mineral]
+    D2[DEMO-002 · Mineral] --> P21[Placeholderite] & P22[Exemplar] & P23[Mockstone]
+    D3[DEMO-003 · Rock] --> D3A[DEMO-003-A<br/>Notarockite · Rock]
+    D3A --> P31[Fauxlite] & P32[Dummynite] & P33[Pseudogläsit]
+    D4[DEMO-004 · Ore] --> P41[Pseudo-Ore · Ore] & P42[Simulacrite · Mineral] & P43[Exampleites nullus · Fossil]
+```
+
+Census: 14 rows = 1 simple + 3 compound + 1 intermediate + 9 leaf, so the four classes
+partition the file. Four specimen rows, ten part rows, maximum depth 2.
+
+What the example demonstrates:
+
+- **Every class of §5.** It is the only file in the repository with an intermediate part:
+  every dataset in §10 has depth 1.
+- **§6.1 rule 2.** `DEMO-003-A` carries an `id` because three rows reference it; every leaf
+  part leaves `id` empty. Its form, `<catalog_number>-<letter>`, cannot collide with a catalog
+  number, as §6.2 requires.
+- **§6.1 rule 5.** The leaves under `DEMO-003-A` reach the specimen row `DEMO-003` in two
+  steps, not one.
+- **§7.2.** Categories are set per row. `DEMO-003` (`Rock`) resolves into a `Rock` part that
+  resolves into `Mineral` parts. `DEMO-004` (`Ore`) holds `Ore`, `Mineral` and `Fossil`
+  parts.
+- **§7.4.** `locality_description` is filled on specimen rows only.
+- **§6.2.** `collection_code` (`DEMO-MIN`, `DEMO-PET`, `DEMO-ECON`) and `institution_code` sit
+  beside `id` on every row.
+- **§6.3.** Every specimen row has a `cataloged_name` and every part row an
+  `authoritative_name`; the simple specimen `DEMO-001` has both. The compound specimen rows
+  `DEMO-002`, `DEMO-003` and `DEMO-004` leave `authoritative_name` empty, as the row notes
+  instruct ("The root name goes in `cataloged_name`"): pattern B of §9.
+- **UTF-8.** `Pseudogläsit` survives only if the file is saved as UTF-8.
+
+Where it departs from this specification:
+
+- **Discrete category on a compound.** `DEMO-002` is a `Mineral` with three parts: advisory
+  M-20 (§7.2; §12, D-07).
+
 ---
 
 ## 6. Identity and reference rules
@@ -238,9 +346,52 @@ load empty strings as `NULL` before applying these predicates.
   range, and nothing downstream may read such a value as a museum identifier.
 - **Catalog numbers are unique per collection, not across the corpus.** mnbasel and nmbern
   share 20,354 compound-specimen ids, both being bare integers. Any product that combines
-  datasets **MUST** carry `collection_code` (or `dataset_code`) beside `id`, and **MUST**
+  datasets **MUST** carry `collection_code` beside `id`, and **MUST**
   resolve `is_part_of` within one source only. The sample builder
   (`data/dist/products/compound_specimen_sample_dataset_20260915.csv`) does both.
+
+### 6.3 Required names (`compound_specimen_rules.md`)
+
+Repository rules of 2026-09-28. Which name column is required depends on the row class of §5:
+
+1. A **specimen row** (`id` not null, `is_part_of` null) **MUST** carry a `cataloged_name`.
+   This covers simple specimens and compound specimen roots alike.
+2. A **part row** (`is_part_of` not null) **MUST** carry an `authoritative_name`. This covers
+   intermediate and leaf parts alike.
+3. A **simple specimen** — a specimen row that no row references through `id = is_part_of` —
+   **MUST** carry both a `cataloged_name` and an `authoritative_name`.
+4. `cataloged_name` is required **only** under rules 1 and 3. On a part row it is not
+   required, and §7.1 says it **SHOULD** be empty.
+5. A **compound specimen** row **MAY** leave `authoritative_name` empty. Its name as a whole is
+   in `cataloged_name`, and its materials are named on its part rows. It **MAY** instead name a
+   main part (pattern A of §9); if it does, that material **SHOULD NOT** be repeated as a part
+   row (§12, D-03).
+
+| Class (§5) | `cataloged_name` | `authoritative_name` |
+|---|---|---|
+| simple specimen | **REQUIRED** | **REQUIRED** |
+| compound specimen | **REQUIRED** | **MAY** be empty |
+| intermediate part | SHOULD be empty | **REQUIRED** |
+| leaf part | SHOULD be empty | **REQUIRED** |
+
+```sql
+-- §6.3 violations
+SELECT row_ord, 'specimen row without cataloged_name' AS reason
+FROM t WHERE id IS NOT NULL AND is_part_of IS NULL AND cataloged_name IS NULL
+UNION ALL
+SELECT row_ord, 'part row without authoritative_name'
+FROM t WHERE is_part_of IS NOT NULL AND authoritative_name IS NULL
+UNION ALL
+SELECT row_ord, 'simple specimen without authoritative_name'
+FROM t WHERE id IS NOT NULL AND is_part_of IS NULL AND authoritative_name IS NULL
+  AND id NOT IN (SELECT is_part_of FROM t WHERE is_part_of IS NOT NULL);
+```
+
+> **Departure from the import schema.** Schema §7.3 makes `authoritative_name` REQUIRED on
+> every row, because it treats the specimen row as also describing the main part. Rule 5
+> relaxes that for compound specimen rows, and this repository follows rule 5 over the schema
+> (§1). A consumer that still enforces schema §7.3 as written will reject such rows (condition
+> `d`, validation M-15 / Q-01) until the schema is amended to match (§12, D-01).
 
 ---
 
@@ -250,14 +401,16 @@ load empty strings as `NULL` before applying these predicates.
 
 | Column | Specimen row | Part row |
 |---|---|---|
-| `cataloged_name` | the object's catalogue name — often the source's own delimited list | **SHOULD** be empty; a consumer discards it |
-| `authoritative_name` | the **main part's** name | the constituent's name |
+| `cataloged_name` | **REQUIRED** (§6.3) — the object's catalogue name, often the source's own delimited list | **SHOULD** be empty; a consumer discards it |
+| `authoritative_name` | the **main part's** name — **REQUIRED** on a simple specimen, **MAY** be empty on a compound specimen (§6.3) | **REQUIRED** (§6.3) — the constituent's name |
 | `verbatim_name` | the main part's name as written in the source | the constituent's name as written |
 
-The draft spec's summary — "compound specimen name in `cataloged_name`, part name in
-`authoritative_name`" — is right about where each *object's* name goes. It does not relieve
-the specimen row of an `authoritative_name`: the schema makes that column REQUIRED on every
-record, because the specimen row also carries the main part. See §12, D-01.
+The convention — "compound specimen name in `cataloged_name`, part name in
+`authoritative_name`", as the demo template's notes put it (§5.1) — is right about where each
+*object's* name goes, and matches the split between specimen name and authoritative
+name (§2.1). On a compound specimen row, `authoritative_name` may therefore be left empty
+(§6.3). On a simple specimen the one row is both the object and its only material, so it
+carries both names.
 
 ### 7.2 Material category
 
@@ -370,8 +523,8 @@ listed them (§12, D-04).
 
 ## 9. Encoding patterns in use
 
-Three patterns for the specimen row of a compound are on disk. Only **A** matches the schema
-as written.
+Three patterns for the specimen row of a compound are on disk. **A** and **B** both satisfy
+§6.3; **C** describes the main part twice.
 
 ### Pattern A — main part on the specimen row (mhngeneva)
 
@@ -398,9 +551,9 @@ The specimen row holds the source's delimited list as its `cataloged_name` and *
 | | 22783 | | Wulfenit | Mineral |
 | | 22783 | | Quarz | Mineral |
 
-The specimen row's main part has no material, which violates the schema's REQUIRED
-`authoritative_name` (validation M-15 / Q-01). A single-token list produces a compound with one
-part that the schema would write as a simple specimen. mnbasel has 34,345 of these and
+The specimen row names no main part, which §6.3 rule 5 permits: every material is a part row.
+It still departs from schema §7.3 as written (§6.3, departure note). A single-token list
+produces a compound with one part that would be better written as a simple specimen. mnbasel has 34,345 of these and
 nmstgallen 890.
 
 ### Pattern C — main part on the specimen row *and* repeated as a part (nmbern stage 04)
@@ -445,7 +598,7 @@ The following held in every file:
 | Property | Result |
 |---|---|
 | Part rows carrying an `id` | 0 |
-| Intermediate parts | 0 — no dataset nests; depth is always 1 |
+| Intermediate parts | 0 — no dataset nests; depth is always 1 (only the demo template, §5.1, nests) |
 | `is_part_of` resolving to a specimen row | 100%, except nmbern's 69 orphans (22 parents) |
 | `specimen_part_role`, `specimen_part_proportion` populated | never |
 | Locality or coordinates repeated on part rows | never |
@@ -509,8 +662,9 @@ GROUP BY 1, 2, 3 HAVING COUNT(*) > 1;
 Also check:
 - no part row carries an unreferenced `id` (§6.2);
 - `cataloged_name`, locality and age are empty on part rows;
-- `authoritative_name` and `material_category` are non-empty on **every** row, specimen rows
-  included;
+- the §6.3 name rules hold: `cataloged_name` on every specimen row, `authoritative_name` on
+  every part row and every simple specimen;
+- `material_category` is non-empty on **every** row;
 - no compound specimen carries a discrete category (M-20, advisory).
 
 The full rule set, with detection status per dataset, is
@@ -524,7 +678,7 @@ Numbered for reference. **Decision** marks a choice for the project, not a mecha
 
 | # | Kind | Deviation | Where | Scale |
 |---|---|---|---|---|
-| **D-01** | Decision | Container specimen rows: no `authoritative_name` on the specimen row, so the main part is undescribed (schema §7.3 REQUIRED; M-15). Fix is to choose a main part (e.g. the first token, as nmbern did) **and remove its part row**, or to name the whole with a rock/aggregate term. | mnbasel, nmstgallen | 45,647 + 1,161 specimen rows |
+| **D-01** | Resolved 2026-09-28 | Container specimen rows: no `authoritative_name` on the specimen row. Permitted by §6.3 rule 5, which relaxes schema §7.3 for compound specimen rows. `schemas/import_schema/import_schema_dictionary.csv` amended to match on 2026-09-28. Remaining action: amend import schema spec §7.3 and validations M-15 / Q-01 (held outside this repository), so that a consumer does not reject these rows. | mnbasel, nmstgallen | 45,647 + 1,161 specimen rows |
 | **D-02** | Decision | One-part compounds under pattern B — a specimen and a single part describing the same material. nmbern folded these into simple specimens; mnbasel and nmstgallen did not. | mnbasel, nmstgallen | 34,345 + 890 |
 | **D-03** | Fix | Main part described twice (specimen row and a part row), and `material_category` empty on compound specimen rows. | nmbern stage 04 | 22,242 duplicated; 22,264 empty categories |
 | **D-04** | Fix | Orphan part rows: parents dropped as `is_ignored`, parts kept → condition `c`. Regenerate stage 04 with `drop_flagged_rows --drop-orphaned-parts`, or accept knowingly. | nmbern stage 04 | 69 rows, 22 parents |
@@ -536,4 +690,6 @@ Numbered for reference. **Decision** marks a choice for the project, not a mecha
 | **D-10** | Decision | Age and geologic unit: specimen-level in the schema, part-level in the GCDM (§7.4). Not yet biting — no part row carries either — but nmbern, with the most parts and a full stratigraphy set, is where it will. | nmbern | — |
 | **D-11** | Decision | Stage numbering: the ladder puts the compound transform at 03 → 04; three datasets did it at 02 → 03 (`stage_transforms_open_issues.md` §1). | mhngeneva, mnbasel, nmbern | — |
 | **D-12** | Docs | `import_dataset_validations.md` (2026-09-03) still reports mnbasel's part structure as void (M-17, M-19: row-ordinal ids, depth 31). The 2026-09-16 build fixed it: 66,335 of 66,335 part rows resolve to a specimen row at depth 1, no part row carries an `id`. Its census table and those two findings are stale. | docs | — |
+| **D-13** | Resolved 2026-09-28 | The demo template uses pattern B: compound specimen rows name the object in `cataloged_name` with `authoritative_name` empty (§5.1). Conforms to §6.3 rule 5; no change to the template needed. | `docs/samples/demo_compound_specimens_data.csv` | 3 of 4 specimen rows |
+| **D-14** | Resolved 2026-09-28 | The former draft `compound_model_specification.md` stated that specimen parts have `id` = NULL, which holds for leaf parts only. The draft is merged into this document (§2.1) with the rule qualified: an intermediate part **MUST** carry an `id` (schema §4.2 b), as `DEMO-003-A` does. | `docs/specifications/compound_model_specification.md` (removed) | — |
 
