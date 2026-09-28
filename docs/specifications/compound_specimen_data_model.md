@@ -1,6 +1,6 @@
 # Compound Specimen Data Model Specification
 > 2026-09-24 (updated 2026-09-28)
-> compound_specimen_data_model_specification.md
+> compound_specimen_data_model.md
 > geoda-transformation-pipeline
 
 How this repository represents a geologic specimen made of several materials — the
@@ -8,10 +8,10 @@ How this repository represents a geologic specimen made of several materials —
 one self-referencing table that carries it, the rules that table must satisfy, how the
 pipeline builds it, and where the datasets on disk currently depart from it.
 
-It absorbs the former draft `compound_model_specification.md` (merged 2026-09-28): its
-definitions are §2.1 and its data-model rules are the row classes of §5. The
-demo template `docs/samples/demo_compound_specimens_data.csv` is worked through in §5.1, and
-the name rules of `compound_specimen_rules.md` are §6.3.
+It absorbs two former files, both merged 2026-09-28: the draft
+`compound_model_specification.md`, whose definitions are §2.1 and whose data-model rules are
+the row classes of §5, and `compound_specimen_rules.md`, whose name rules are §6.3. The demo
+template `docs/samples/demo_compound_specimens_data.csv` is worked through in §5.1.
 
 ---
 
@@ -47,12 +47,6 @@ exception: `authoritative_name` **MAY** be empty on a compound specimen row (§6
 | Source | What it contributes |
 |---|---|
 | `docs/supplementals/GCDM.CompoundSpecimenSection_20260903.md` §3 | Geologic Collections Data Model: compound specimen, specimen part, role, proportion, material category, age/unit inheritance |
-
-**Repository rules** — bind this repository's files:
-
-| Source | What it contributes |
-|---|---|
-| `docs/specifications/compound_specimen_rules.md` (2026-09-28) | which of `cataloged_name` / `authoritative_name` each row class requires, and the relaxation of schema §7.3 for compound specimen rows (§6.3) |
 
 **Illustrative** — a worked example, not evidence of any dataset:
 
@@ -350,9 +344,9 @@ Where it departs from this specification:
   resolve `is_part_of` within one source only. The sample builder
   (`data/dist/products/compound_specimen_sample_dataset_20260915.csv`) does both.
 
-### 6.3 Required names (`compound_specimen_rules.md`)
+### 6.3 Required names
 
-Repository rules of 2026-09-28. Which name column is required depends on the row class of §5:
+Repository rules of 2026-09-28, formerly `compound_specimen_rules.md`. Which name column is required depends on the row class of §5:
 
 1. A **specimen row** (`id` not null, `is_part_of` null) **MUST** carry a `cataloged_name`.
    This covers simple specimens and compound specimen roots alike.
@@ -678,7 +672,7 @@ Numbered for reference. **Decision** marks a choice for the project, not a mecha
 
 | # | Kind | Deviation | Where | Scale |
 |---|---|---|---|---|
-| **D-01** | Resolved 2026-09-28 | Container specimen rows: no `authoritative_name` on the specimen row. Permitted by §6.3 rule 5, which relaxes schema §7.3 for compound specimen rows. `schemas/import_schema/import_schema_dictionary.csv` amended to match on 2026-09-28. Remaining action: amend import schema spec §7.3 and validations M-15 / Q-01 (held outside this repository), so that a consumer does not reject these rows. | mnbasel, nmstgallen | 45,647 + 1,161 specimen rows |
+| **D-01** | Resolved 2026-09-28 | Container specimen rows: no `authoritative_name` on the specimen row. Permitted by §6.3 rule 5, which relaxes schema §7.3 for compound specimen rows. Remaining action: amend import schema §7.3 and validations M-15 / Q-01 to match, so that a consumer does not reject these rows. | mnbasel, nmstgallen | 45,647 + 1,161 specimen rows |
 | **D-02** | Decision | One-part compounds under pattern B — a specimen and a single part describing the same material. nmbern folded these into simple specimens; mnbasel and nmstgallen did not. | mnbasel, nmstgallen | 34,345 + 890 |
 | **D-03** | Fix | Main part described twice (specimen row and a part row), and `material_category` empty on compound specimen rows. | nmbern stage 04 | 22,242 duplicated; 22,264 empty categories |
 | **D-04** | Fix | Orphan part rows: parents dropped as `is_ignored`, parts kept → condition `c`. Regenerate stage 04 with `drop_flagged_rows --drop-orphaned-parts`, or accept knowingly. | nmbern stage 04 | 69 rows, 22 parents |

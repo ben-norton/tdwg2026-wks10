@@ -1,0 +1,15 @@
+[project]
+name = "tdwg2026-wks10"
+version = "0.1.0"
+description = "TDWG 2026 Workshop WKS10: Geological Collections with Darwin Core: Compound Specimen Model and Mineralogy Extension, Accelerated with AI"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.13"
+dependencies = [
+    "pandas>=3.0",
+]
+
+[tool.uv]
+# Standalone scripts under src/, not an installable package.
+package = false

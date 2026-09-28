@@ -9,6 +9,5 @@ generally important information for provenance.
 2. Transformations are done in a stepwise fashion where each time a script is run, a 
 new version of an output dataset is created with two-digit number + 1 of the source file.
 Example: a transformation is run against dataset_00.csv. The result is named: dataset_01.csv.
-3. 
 
 
