@@ -9,7 +9,8 @@ Start: data/output/de_locations/de_locations_verbatim_00.csv
 2. Remove quotation marks
 3. Transpose comma separated values into rows.
 4. Copy to new file de_locations_transposed.csv
-5. Categorize values by geopolitical rank - country, first order division, second order division, placename, township. Use GADM authoritative dataset for reference. EWtner the category into the second column
+5. Categorize values by geopolitical rank - country, first order division, second order division, placename, township. Use GADM authoritative dataset for reference. Enter the category into the second column (output: de_locations_01.csv)
+6. Translate German language countries, first order divisions, and second order divisions to English and add the English language version in a third column location_en. Leave location_en blank for named places (output: de_locations_02.csv)
 
 
 First Order (Geopolitical/Administrative ) Division: he primary subnational administrative unit into which a sovereign country is divided for governance.
