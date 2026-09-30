@@ -15,7 +15,7 @@ The self-join is id = is_part_of. Locality stays on the specimen row only.
 
 Input:  data/output/mineral_samples/mineral_samples_00.tsv
 Output: data/output/mineral_samples/mineral_samples_02.tsv
-        data/output/mineral_samples/mineral_samples_02_report.md
+        data/output/mineral_samples/reports/mineral_samples_02_report.md
 
 Usage:
     python src/transform/mineral_samples_compound_transform.py [--input PATH] [--output PATH]
@@ -192,7 +192,8 @@ def write_report(input_path, output_path, source, result, duplicates, checks, st
         + ", ".join(unmatched)
     )
 
-    report_path = output_path.with_name(f"{output_path.stem}_report.md")
+    report_path = output_path.parent / "reports" / f"{output_path.stem}_report.md"
+    report_path.parent.mkdir(exist_ok=True)
     report_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
     return report_path
 
