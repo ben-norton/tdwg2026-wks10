@@ -1,0 +1,33 @@
+﻿Mineral_Summary,match,category,meaning
+1M,full,polytype designation,polytype symbol 1M
+2M,full,polytype designation,polytype symbol 2M
+2M1,full,polytype designation,polytype symbol 2M1
+2M2,full,polytype designation,polytype symbol 2M2
+allgemein,full,qualifier,general / unspecified
+diskred,full,qualifier,discredited
+feinkristallin,full,qualifier,fine- / coarse-crystalline (texture)
+Fenster- u Zepter-,full,qualifier,window and sceptre (crystal habit)
+GALIANT Gadolinium Gallium Granat,full,single exclusion,listed in single_exclusions.csv
+Gemenge,full,annotation,mixture
+Mineral nicht bestimmt,full,annotation,mineral not determined
+Mineralgemenge,full,annotation,mixture
+Mineralgruppe,full,annotation,mineral group
+Mischkristall,full,annotation,solid solution / mixed crystal
+Neotyp,full,qualifier,type status
+Noch abklären,full,annotation,still to be clarified
+ohne Namen,full,annotation,without name
+organisches Mineral,full,annotation,organic mineral (generic description)
+Polytyp 2H,full,polytype designation,polytype 2H
+Polytyp 3R,full,polytype designation,polytype 3R
+Polytyp unbestimmt,full,polytype designation,polytype undetermined
+Prov,full,annotation,"abbreviation, probably provisional or provenance"
+s Objektbem,full,annotation,see object remark
+s Objektbemerkung,full,annotation,see object remark
+Sb,full,acronym,chemical symbol Sb
+sekundäres Uranmineral,full,annotation,sekundäres Uran mineral (generic description)
+sl,full,qualifier,sensu lato / sensu stricto (abbreviation)
+synth,full,qualifier,synthetic
+unbestimmt,full,annotation,undetermined / undefined / unknown
+undef Eisenhydroxid,full,single exclusion,listed in single_exclusions.csv
+undefiniert,full,annotation,undetermined / undefined / unknown
+ungen def Mn-Hydr,full,single exclusion,listed in single_exclusions.csv

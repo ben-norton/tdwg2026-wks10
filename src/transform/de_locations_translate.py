@@ -5,7 +5,7 @@ Named places are left blank/empty in location_en.
 
 Input:  data/output/de_locations/de_locations_01.csv
 Output: data/output/de_locations/de_locations_02.csv
-        data/output/de_locations/de_locations_02_report.md
+        data/output/de_locations/reports/de_locations_02_report.md
 
 Usage:
     python src/transform/de_locations_translate.py [--input PATH] [--output PATH]
@@ -179,7 +179,8 @@ def write_report(input_path, output_path, stats, started):
         )
 
     lines.append("")
-    report_path = output_path.with_name(f"{output_path.stem}_report.md")
+    report_path = output_path.parent / "reports" / f"{output_path.stem}_report.md"
+    report_path.parent.mkdir(exist_ok=True)
     report_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
     return report_path
 

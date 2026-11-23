@@ -11,7 +11,7 @@ Steps:
 Input:  data/output/de_locations/de_locations_verbatim_00.csv
 Output: data/output/de_locations/de_locations_01.csv
         data/output/de_locations/de_locations_transposed.csv
-        data/output/de_locations/de_locations_01_report.md
+        data/output/de_locations/reports/de_locations_01_report.md
 
 Usage:
     python src/transform/de_locations_transform.py [--input PATH] [--output PATH]
@@ -160,7 +160,8 @@ def write_report(input_path, output_path, stats, started):
     ]
     lines += [f"| {name} | {count} |" for name, count in unmatched.items()]
 
-    report_path = output_path.with_name(f"{output_path.stem}_report.md")
+    report_path = output_path.parent / "reports" / f"{output_path.stem}_report.md"
+    report_path.parent.mkdir(exist_ok=True)
     report_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
     return report_path
 

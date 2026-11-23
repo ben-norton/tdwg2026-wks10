@@ -1,0 +1,94 @@
+﻿fr_mineral_name,match,category,meaning
+(Carbonate-)cyanotrichite,full,recipe rule,listed in the recipe (E4)
+"> 10 Éch. Cassiterite, Etc. (Liste)",full,annotation,lot note: more than 10 samples (E1)
+"> 10 Éch. Magnétite, Grenat, Scheelite",full,annotation,lot note: more than 10 samples (E1)
+"> 20 Éch. Recherche Agardite-Ce, Etc. (Liste)",full,annotation,lot note: more than 20 samples (E1)
+"> 5 Éch. Magnetite, Etc.",full,annotation,lot note: more than 5 samples (E1)
+A analyser,full,annotation,to be checked: A analyser (E2)
+à identifier,full,annotation,to be checked: à identifier (E2)
+Acétate de Cu,full,recipe rule,organic-acid salt: Acétate (E3)
+Acétate de Cu et Ca,full,recipe rule,organic-acid salt: Acétate (E3)
+Acétate de Cu et Sr,full,recipe rule,organic-acid salt: Acétate (E3)
+"Alurgite = Mg, Fe, Mn Muscovite",full,single exclusion,listed in single_exclusions.csv
+Amalgame [pas une espèce],full,single exclusion,listed in single_exclusions.csv
+Amazonite = Microcline,full,single exclusion,listed in single_exclusions.csv
+Amber (2 Éch.),full,single exclusion,listed in single_exclusions.csv
+"Amianthus=Tremolite, Actinolite, Chrysotile, etc",full,single exclusion,listed in single_exclusions.csv
+"Analcime (-1c,-1q,-1o,-1m)",full,single exclusion,listed in single_exclusions.csv
+"Argent (-3c,-2h,-4h)",full,single exclusion,listed in single_exclusions.csv
+"Argent (-3c,-2h,-4h) 'Amalgam'",full,single exclusion,listed in single_exclusions.csv
+"Argent (-3c,-2h,-4h) 'Kongsbergite'",full,single exclusion,listed in single_exclusions.csv
+Formiate de Ca,full,recipe rule,organic-acid salt: Formiate (E3)
+Formiate de Cd,full,recipe rule,organic-acid salt: Formiate (E3)
+Inconnu,full,annotation,unknown / undetermined
+Oxalate de K,full,recipe rule,organic-acid salt: Oxalate (E3)
+Sulfate d'Al et Cr,full,single exclusion,listed in single_exclusions.csv
+Sulfate d'Al et de Tl,full,single exclusion,listed in single_exclusions.csv
+Sulfate d'Al et K,full,single exclusion,listed in single_exclusions.csv
+Sulfate d'Al et NH4,full,single exclusion,listed in single_exclusions.csv
+Sulfate d'Al et Tl,full,single exclusion,listed in single_exclusions.csv
+"Sulfate d'Al, Cr et NH4",full,single exclusion,listed in single_exclusions.csv
+Sulfate d'in et Cs,full,single exclusion,listed in single_exclusions.csv
+Sulfate de Ca,full,single exclusion,listed in single_exclusions.csv
+Sulfate de Cd,full,single exclusion,listed in single_exclusions.csv
+Sulfate de Co,full,single exclusion,listed in single_exclusions.csv
+Sulfate de Co et de Tl,full,single exclusion,listed in single_exclusions.csv
+Sulfate de Co et K,full,single exclusion,listed in single_exclusions.csv
+Sulfate de Co et NH4,full,single exclusion,listed in single_exclusions.csv
+Sulfate de Cr et de NH4,full,single exclusion,listed in single_exclusions.csv
+Sulfate de Cr et K,full,single exclusion,listed in single_exclusions.csv
+"Sulfate de Cr, Al et Rb",full,single exclusion,listed in single_exclusions.csv
+Sulfate de Cs et Al,full,single exclusion,listed in single_exclusions.csv
+Sulfate de Cs et de Cr,full,single exclusion,listed in single_exclusions.csv
+Sulfate de Cu,full,single exclusion,listed in single_exclusions.csv
+Sulfate de Cu et Cr,full,single exclusion,listed in single_exclusions.csv
+Sulfate de K,full,single exclusion,listed in single_exclusions.csv
+Sulfate de K Et Al,full,single exclusion,listed in single_exclusions.csv
+Sulfate de K et Al hydraté,full,single exclusion,listed in single_exclusions.csv
+Sulfate de K et Cr,full,single exclusion,listed in single_exclusions.csv
+Sulfate de K et Cr hydraté,full,single exclusion,listed in single_exclusions.csv
+Sulfate de K et d'Al,full,single exclusion,listed in single_exclusions.csv
+Sulfate de K et Li,full,single exclusion,listed in single_exclusions.csv
+"Sulfate de K, Cr et NH4",full,single exclusion,listed in single_exclusions.csv
+"Sulfate de K, Fe et Cr",full,single exclusion,listed in single_exclusions.csv
+Sulfate de Mg,full,single exclusion,listed in single_exclusions.csv
+Sulfate de Mg et K,full,single exclusion,listed in single_exclusions.csv
+Sulfate de N,full,single exclusion,listed in single_exclusions.csv
+Sulfate de NH4,full,single exclusion,listed in single_exclusions.csv
+Sulfate de NH4 et d'Al,full,single exclusion,listed in single_exclusions.csv
+Sulfate de NH4 et de Cu,full,single exclusion,listed in single_exclusions.csv
+Sulfate de NH4 et de Fe,full,single exclusion,listed in single_exclusions.csv
+Sulfate de NH4 et de Zn,full,single exclusion,listed in single_exclusions.csv
+Sulfate de NH4 et Fe,full,single exclusion,listed in single_exclusions.csv
+Sulfate de NH4 et K,full,single exclusion,listed in single_exclusions.csv
+Sulfate de Ni,full,single exclusion,listed in single_exclusions.csv
+Sulfate de Ni et K,full,single exclusion,listed in single_exclusions.csv
+Sulfate de Ni et NH4,full,single exclusion,listed in single_exclusions.csv
+Sulfate de Ni et Rb,full,single exclusion,listed in single_exclusions.csv
+Sulfate de Ni hydraté,full,single exclusion,listed in single_exclusions.csv
+"Sulfate de Ni, Cr et NH4",full,single exclusion,listed in single_exclusions.csv
+Sulfate de Rb et In,full,single exclusion,listed in single_exclusions.csv
+Sulfate de Tl et Cr,full,single exclusion,listed in single_exclusions.csv
+Sulfate de Tl et de Cr,full,single exclusion,listed in single_exclusions.csv
+"Sulfate de Tl, Cr et Al",full,single exclusion,listed in single_exclusions.csv
+Sulfate de Zn et K,full,single exclusion,listed in single_exclusions.csv
+Sulfate de Zn et NH4,full,single exclusion,listed in single_exclusions.csv
+"Sulfate hydraté de Co,Cu,Zn,Mg,K",full,single exclusion,listed in single_exclusions.csv
+Sulfate hydraté de Fe et NH4,full,single exclusion,listed in single_exclusions.csv
+Sulfate hydraté de Mg et NH4,full,single exclusion,listed in single_exclusions.csv
+"Sulfate hydraté de Ni,Cu,Co,Zn",full,single exclusion,listed in single_exclusions.csv
+"Sulfate hydraté de Ni,Mg",full,single exclusion,listed in single_exclusions.csv
+Sulfite de Sr,full,single exclusion,listed in single_exclusions.csv
+Sulfure de Cd,full,single exclusion,listed in single_exclusions.csv
+Sulfure de Na,full,single exclusion,listed in single_exclusions.csv
+Tartrate de K,full,recipe rule,organic-acid salt: Tartrate (E3)
+Tartrate de K et Na,full,recipe rule,organic-acid salt: Tartrate (E3)
+"The Storr, Skye, Scotland, Uk",full,annotation,locality recorded in the name field
+"Tungstenite (-2h,-3r)",full,single exclusion,listed in single_exclusions.csv
+Urate de K,full,recipe rule,organic-acid salt: Urate (E3)
+"Us Gypsum Mine, Empire, Nv",full,single exclusion,listed in single_exclusions.csv
+vert clair,full,qualifier,colour: vert clair
+\s+=\s.*$,substring,substring,X1: ' = ' and everything after it
+\s+de\s.*$,substring,substring,X2: ' de ' and everything after it
+(?i)\s*\bsynth[ée]tique\b,substring,substring,X3: the word 'synthétique'
+\s*\(\s*\?+\s*\)|\s*\?+,substring,substring,"X4: question marks: '?', '??', '(?)'"
